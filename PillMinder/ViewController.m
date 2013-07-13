@@ -11,6 +11,9 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet UIStepper *stepper;
+@property (weak, nonatomic) IBOutlet UILabel *instructionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 
 @end
 
@@ -21,7 +24,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.slider.alpha = 0.0f;
+    self.stepper.alpha = 0.0f;
+    self.valueLabel.alpha = 0.0f;
+    self.instructionLabel.alpha = 0.0f;
+    
+    
+    [self setValueFromStepper];
 }
 
 - (void)viewDidUnload
@@ -38,13 +46,30 @@
 - (IBAction)downTheHatchPressed:(id)sender 
 {
     [UIView animateWithDuration:0.7f animations:^{
-        self.slider.alpha = 1.0f;
+        self.stepper.alpha = 1.0f;
+        self.valueLabel.alpha = 1.0f;
+        self.instructionLabel.alpha = 1.0f;
     } completion:^(BOOL finished) {
         
     }];
     
     self.slider.hidden = NO;
 }
+
+
+- (IBAction)stepperChanged:(id)sender
+{
+    NSLog(@"Stepper Changed! %.1f", self.stepper.value);
+    [self setValueFromStepper];
+    
+}
+
+- (void) setValueFromStepper
+{
+    self.valueLabel.text = [NSString stringWithFormat:@"%.1f hours from now", self.stepper.value];
+}
+
+
 
 - (void) previousFunctionality
 {
