@@ -52,4 +52,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"It's Time for Your Next Dose"
+                                                        message:@"Return to app and set new alarm."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Close"
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
+
 @end

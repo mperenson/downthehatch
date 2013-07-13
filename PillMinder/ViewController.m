@@ -10,10 +10,10 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
 @property (weak, nonatomic) IBOutlet UILabel *instructionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
+@property (weak, nonatomic) IBOutlet UIButton *setAlarm;
 
 @end
 
@@ -27,6 +27,7 @@
     self.stepper.alpha = 0.0f;
     self.valueLabel.alpha = 0.0f;
     self.instructionLabel.alpha = 0.0f;
+    self.setAlarm.alpha = 0.0f;
     
     
     [self setValueFromStepper];
@@ -49,11 +50,13 @@
         self.stepper.alpha = 1.0f;
         self.valueLabel.alpha = 1.0f;
         self.instructionLabel.alpha = 1.0f;
+        self.setAlarm.alpha = 1.0f;
+        
     } completion:^(BOOL finished) {
         
     }];
     
-    self.slider.hidden = NO;
+    
 }
 
 
@@ -64,11 +67,47 @@
     
 }
 
+
+- (IBAction)setAlarmTapped:(id)sender
+{
+    [self scheduleNotification: self.stepper.value];
+    NSLog(@"Alarm set");
+    self.stepper.alpha = 0.0f;
+    self.valueLabel.alpha = 0.0f;
+    self.instructionLabel.alpha = 0.0f;
+    self.setAlarm.alpha = 0.0f;
+    
+    
+}
+
 - (void) setValueFromStepper
 {
     self.valueLabel.text = [NSString stringWithFormat:@"%.1f hours from now", self.stepper.value];
 }
 
+- (void) scheduleNotification:(CGFloat)hoursValue
+{
+    // Convert hours to seconds
+    
+    NSInteger seconds = hoursValue * 3600;
+    
+    NSLog(@"Setting alarm for %d seconds", seconds);
+    
+    // Schedule local notification
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    
+    notification.alertBody = @"Go to the Dose Me!";
+    
+   notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:seconds];
+
+    notification.applicationIconBadgeNumber=1;
+    
+    NSLog(@"Local Notification %@", notification);
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    //[[UIApplication sharedApplication] presentLocalNotificationNow:self.localNot];
+}
 
 
 - (void) previousFunctionality
