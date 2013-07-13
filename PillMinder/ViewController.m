@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+
 @end
 
 @implementation ViewController
@@ -18,6 +20,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.slider.alpha = 0.0f;
 }
 
 - (void)viewDidUnload
@@ -33,12 +37,24 @@
 
 - (IBAction)downTheHatchPressed:(id)sender 
 {
+    [UIView animateWithDuration:0.7f animations:^{
+        self.slider.alpha = 1.0f;
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+    self.slider.hidden = NO;
+}
+
+- (void) previousFunctionality
+{
+    
     NSLog(@"Down the Hatch was Pressed!");
     
-    UIAlertView *newAlertView = [[UIAlertView alloc] initWithTitle:@"Button Pressed" 
-                                                           message:@"Down the Hatch was pressed" 
-                                                          delegate:self 
-                                                 cancelButtonTitle:@"OK" 
+    UIAlertView *newAlertView = [[UIAlertView alloc] initWithTitle:@"Button Pressed"
+                                                           message:@"Down the Hatch was pressed"
+                                                          delegate:self
+                                                 cancelButtonTitle:@"OK"
                                                  otherButtonTitles:nil];
     
     [newAlertView show];
@@ -54,8 +70,7 @@
     self.boolProperty = FALSE;
     
     self.integerProperty = 43;
-    
-    
+   
 }
 
 
