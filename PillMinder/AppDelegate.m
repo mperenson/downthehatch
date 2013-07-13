@@ -53,11 +53,25 @@
 }
 
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"It's Time for Your Next Dose"
-                                                        message:@"Return to app and set new alarm."
-                                                       delegate:self
-                                              cancelButtonTitle:@"Close"
-                                              otherButtonTitles:nil];
+    
+    UIAlertView *alertView = nil;
+    
+    if ([notification.alertBody isEqualToString:@"It's Time for Your Next Dose"]) {
+        alertView = [[UIAlertView alloc] initWithTitle:@"Set new alarm."
+                                               message:@""
+                                              delegate:self
+                                     cancelButtonTitle:@"Close"
+                                     otherButtonTitles:nil];
+    }
+    else {
+        alertView = [[UIAlertView alloc] initWithTitle:@"Time to Eat!"
+                                               message:@""
+                                              delegate:self
+                                     cancelButtonTitle:@"Close"
+                                     otherButtonTitles:nil];
+
+    }
+
     [alertView show];
 }
 
