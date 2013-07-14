@@ -58,6 +58,7 @@
 {
     // Convert hours to seconds
     NSInteger seconds = hoursValue * 60;
+    //NSInteger seconds = hoursValue * 3600;
     NSLog(@"Setting alarm for %d seconds", seconds);
     
     // Schedule local notification
