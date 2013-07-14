@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "Constants.h"
 
 @implementation AppDelegate
 
@@ -56,18 +57,18 @@
     
     UIAlertView *alertView = nil;
     
-    if ([notification.alertBody isEqualToString:@"It's Time to Schedule Your Next Dose"]) {
-        alertView = [[UIAlertView alloc] initWithTitle:@"Set new alarm."
+    if ([notification.alertBody isEqualToString:kScheduleNextDoseMessage]) {
+        alertView = [[UIAlertView alloc] initWithTitle:kSetNewAlarmMessage
                                                message:@""
                                               delegate:self
-                                     cancelButtonTitle:@"Close"
+                                     cancelButtonTitle:kCloseButtonTitle
                                      otherButtonTitles:nil];
     }
     else {
-        alertView = [[UIAlertView alloc] initWithTitle:@"Time to Eat!"
+        alertView = [[UIAlertView alloc] initWithTitle:kTimeToEatMessage
                                                message:@""
                                               delegate:self
-                                     cancelButtonTitle:@"Close"
+                                     cancelButtonTitle:kCloseButtonTitle
                                      otherButtonTitles:nil];
 
     }

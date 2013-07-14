@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LogViewController.h"
+#import "Constants.h"
 
 @interface ViewController ()
 
@@ -28,7 +29,6 @@
     
     self.medicationLogPath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"medication-log.csv"];
 
-    
     self.stepper.alpha = 0.0f;
     self.valueLabel.alpha = 0.0f;
     self.instructionLabel.alpha = 0.0f;
@@ -84,7 +84,7 @@
         self.setAlarm.alpha = 1.0f;
         
     } completion:^(BOOL finished) {
-        [self scheduleNotification:1 alertBody:@"Time to Eat!"];
+        [self scheduleNotification:1 alertBody:kTimeToEatMessage];
         NSLog(@"Alarm set");
         
     }];
@@ -103,8 +103,7 @@
 
 - (IBAction)setAlarmTapped:(id)sender
 {
-    [self scheduleNotification:self.stepper.value alertBody:@"It's Time for Your Next Dose"];
-    NSLog(@"Alarm set");
+    [self scheduleNotification:self.stepper.value alertBody:kScheduleNextDoseMessage];
     self.stepper.alpha = 0.0f;
     self.valueLabel.alpha = 0.0f;
     self.instructionLabel.alpha = 0.0f;

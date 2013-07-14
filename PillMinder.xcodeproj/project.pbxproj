@@ -45,6 +45,7 @@
 		A78F9B3E17924DA7004D354C /* LogViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogViewCell.xib; sourceTree = "<group>"; };
 		A78F9B40179261FB004D354C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A78F9B421792640D004D354C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		A78F9B4417930B64004D354C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 		178520110000277900DC657F /* PillMinder */ = {
 			isa = PBXGroup;
 			children = (
+				A78F9B4417930B64004D354C /* Constants.h */,
 				A78F9B3817924C49004D354C /* LogViewController */,
 				1785201A0000277900DC657F /* AppDelegate.h */,
 				1785201B0000277900DC657F /* AppDelegate.m */,
