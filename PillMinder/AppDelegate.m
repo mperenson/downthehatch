@@ -56,7 +56,7 @@
     
     UIAlertView *alertView = nil;
     
-    if ([notification.alertBody isEqualToString:@"It's Time for Your Next Dose"]) {
+    if ([notification.alertBody isEqualToString:@"It's Time to Schedule Your Next Dose"]) {
         alertView = [[UIAlertView alloc] initWithTitle:@"Set new alarm."
                                                message:@""
                                               delegate:self
