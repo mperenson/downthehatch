@@ -19,6 +19,8 @@
 		A78F9B3A17924C80004D354C /* LogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78F9B3917924C80004D354C /* LogViewController.xib */; };
 		A78F9B3D17924D91004D354C /* LogViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9B3C17924D91004D354C /* LogViewCell.m */; };
 		A78F9B3F17924DA7004D354C /* LogViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78F9B3E17924DA7004D354C /* LogViewCell.xib */; };
+		A78F9B41179261FB004D354C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F9B40179261FB004D354C /* MessageUI.framework */; };
+		A78F9B431792640D004D354C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A78F9B421792640D004D354C /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		A78F9B3B17924D91004D354C /* LogViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewCell.h; sourceTree = "<group>"; };
 		A78F9B3C17924D91004D354C /* LogViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewCell.m; sourceTree = "<group>"; };
 		A78F9B3E17924DA7004D354C /* LogViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogViewCell.xib; sourceTree = "<group>"; };
+		A78F9B40179261FB004D354C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A78F9B421792640D004D354C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78F9B41179261FB004D354C /* MessageUI.framework in Frameworks */,
 				1785200C0000277900DC657F /* UIKit.framework in Frameworks */,
 				1785200E0000277900DC657F /* Foundation.framework in Frameworks */,
 				178520100000277900DC657F /* CoreGraphics.framework in Frameworks */,
@@ -77,6 +82,7 @@
 		1785200A0000277800DC657F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A78F9B40179261FB004D354C /* MessageUI.framework */,
 				1785200B0000277900DC657F /* UIKit.framework */,
 				1785200D0000277900DC657F /* Foundation.framework */,
 				1785200F0000277900DC657F /* CoreGraphics.framework */,
@@ -101,6 +107,7 @@
 		178520120000277900DC657F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A78F9B421792640D004D354C /* Default-568h@2x.png */,
 				178520130000277900DC657F /* PillMinder-Info.plist */,
 				178520140000277900DC657F /* InfoPlist.strings */,
 				178520170000277900DC657F /* main.m */,
@@ -176,6 +183,7 @@
 				178520220000277900DC657F /* ViewController.xib in Resources */,
 				A78F9B3A17924C80004D354C /* LogViewController.xib in Resources */,
 				A78F9B3F17924DA7004D354C /* LogViewCell.xib in Resources */,
+				A78F9B431792640D004D354C /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,11 +272,15 @@
 		178520260000277900DC657F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PillMinder/PillMinder-Prefix.pch";
 				INFOPLIST_FILE = "PillMinder/PillMinder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -277,11 +289,15 @@
 		178520270000277900DC657F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PillMinder/PillMinder-Prefix.pch";
 				INFOPLIST_FILE = "PillMinder/PillMinder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

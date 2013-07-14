@@ -8,6 +8,7 @@
 
 #import "LogViewController.h"
 
+
 @interface LogViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *logEntries;
@@ -75,6 +76,40 @@
 - (IBAction)closeTapped:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)exportTapped:(id)sender
+{
+    [self sendCSVFileToMail];
+}
+
+- (void) sendCSVFileToMail
+{
+    MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
+    mailer.mailComposeDelegate = self;
+    [mailer setSubject:@"Exported log from Dose Me"];
+    [mailer addAttachmentData:[NSData dataWithContentsOfFile:self.medicationLogPath]
+                     mimeType:@"text/csv"
+                     fileName:@"doseme-medication-log.csv"];
+    [self presentViewController:mailer animated:YES completion:^() {
+        
+    }];
+
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    if(result == MFMailComposeResultFailed) {
+        UIAlertView *errorView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                   message:@"An error occurred trying to export your log, please retrieve it from the device using iExplorer instead."
+                                  delegate:nil
+                         cancelButtonTitle:@"OK"
+                         otherButtonTitles:nil];
+        
+        [errorView show];
+    }
+    else {
+        [controller dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 #pragma mark - Properties

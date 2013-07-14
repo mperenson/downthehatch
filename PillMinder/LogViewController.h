@@ -6,9 +6,9 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface LogViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface LogViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) NSString *medicationLogPath;
 
