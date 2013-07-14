@@ -8,5 +8,5 @@
 
 static NSString *kScheduleNextDoseMessage = @"It's Time to Schedule your Next Dose";
 static NSString *kTimeToEatMessage = @"Time to Eat!";
-static NSString *kSetNewAlarmMessage = @"Set new Alarm";
+static NSString *kSetNewAlarmMessage = @"Set New Alarm";
 static NSString *kCloseButtonTitle = @"Close";
