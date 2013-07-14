@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		174046C117930F0800EB221C /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 174046C017930F0800EB221C /* icon_114.png */; };
 		174046C317930F1000EB221C /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 174046C217930F1000EB221C /* icon_57.png */; };
+		174046C5179321CF00EB221C /* icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 174046C4179321CF00EB221C /* icon_114x114.png */; };
+		174046C71793223300EB221C /* icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 174046C61793223300EB221C /* icon_57x57.png */; };
+		174046CD1793276000EB221C /* bkgrnd_640x960v3.png in Resources */ = {isa = PBXBuildFile; fileRef = 174046CC1793276000EB221C /* bkgrnd_640x960v3.png */; };
 		1785200C0000277900DC657F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1785200B0000277900DC657F /* UIKit.framework */; };
 		1785200E0000277900DC657F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1785200D0000277900DC657F /* Foundation.framework */; };
 		178520100000277900DC657F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1785200F0000277900DC657F /* CoreGraphics.framework */; };
@@ -28,6 +31,9 @@
 /* Begin PBXFileReference section */
 		174046C017930F0800EB221C /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
 		174046C217930F1000EB221C /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
+		174046C4179321CF00EB221C /* icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114x114.png; sourceTree = "<group>"; };
+		174046C61793223300EB221C /* icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57x57.png; sourceTree = "<group>"; };
+		174046CC1793276000EB221C /* bkgrnd_640x960v3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bkgrnd_640x960v3.png; path = ../Downloads/bkgrnd_640x960v3.png; sourceTree = "<group>"; };
 		178520070000277800DC657F /* PillMinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillMinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1785200B0000277900DC657F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1785200D0000277900DC657F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -70,6 +76,9 @@
 		17851FFC0000277800DC657F = {
 			isa = PBXGroup;
 			children = (
+				174046C61793223300EB221C /* icon_57x57.png */,
+				174046C4179321CF00EB221C /* icon_114x114.png */,
+				174046CC1793276000EB221C /* bkgrnd_640x960v3.png */,
 				174046C217930F1000EB221C /* icon_57.png */,
 				174046C017930F0800EB221C /* icon_114.png */,
 				178520110000277900DC657F /* PillMinder */,
@@ -101,12 +110,12 @@
 			isa = PBXGroup;
 			children = (
 				A78F9B4417930B64004D354C /* Constants.h */,
-				A78F9B3817924C49004D354C /* LogViewController */,
 				1785201A0000277900DC657F /* AppDelegate.h */,
 				1785201B0000277900DC657F /* AppDelegate.m */,
 				1785201D0000277900DC657F /* ViewController.h */,
 				1785201E0000277900DC657F /* ViewController.m */,
 				178520200000277900DC657F /* ViewController.xib */,
+				A78F9B3817924C49004D354C /* LogViewController */,
 				178520120000277900DC657F /* Supporting Files */,
 			);
 			path = PillMinder;
@@ -194,6 +203,9 @@
 				A78F9B431792640D004D354C /* Default-568h@2x.png in Resources */,
 				174046C117930F0800EB221C /* icon_114.png in Resources */,
 				174046C317930F1000EB221C /* icon_57.png in Resources */,
+				174046C5179321CF00EB221C /* icon_114x114.png in Resources */,
+				174046C71793223300EB221C /* icon_57x57.png in Resources */,
+				174046CD1793276000EB221C /* bkgrnd_640x960v3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
