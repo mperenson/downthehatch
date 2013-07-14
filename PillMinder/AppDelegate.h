@@ -3,7 +3,7 @@
 //  PillMinder
 //
 //  Created by Melissa Perenson on 12/31/00.
-//  Copyright (c) 2000 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2000 Flight of Fancy. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
