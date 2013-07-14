@@ -10,4 +10,6 @@
 
 @interface LogViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) NSString *medicationLogPath;
+
 @end

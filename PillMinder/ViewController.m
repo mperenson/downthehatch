@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 @property (weak, nonatomic) IBOutlet UIButton *setAlarm;
 
+@property (strong, nonatomic) NSString *medicationLogPath;
+
 @end
 
 @implementation ViewController
@@ -23,7 +25,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.medicationLogPath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"medication-log.csv"];
+
     
     self.stepper.alpha = 0.0f;
     self.valueLabel.alpha = 0.0f;
@@ -112,6 +116,7 @@
     NSLog(@"Log Tapped");
     NSString *logNibName = NSStringFromClass([LogViewController class]);
     LogViewController *logViewController = [[LogViewController alloc] initWithNibName:logNibName bundle:nil];
+    logViewController.medicationLogPath = [self.medicationLogPath copy];
     
     [self presentViewController:logViewController animated:YES completion:nil];
 }
@@ -122,9 +127,8 @@
 
 - (void) writeEntryToCSVFile
 {
-    NSString *medicationLogFilepath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"medication-log.csv"];
     
-    [self createCSVFileIfItDoesntAlreadyExist:medicationLogFilepath];
+    [self createCSVFileIfItDoesntAlreadyExist:self.medicationLogPath];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
@@ -133,9 +137,9 @@
     NSString *entryString = [@"\"Medication Taken\" " stringByAppendingString:dateString];
     
     NSArray *entryArray = @[entryString, @"\n"];
-    NSString *entry = [entryArray componentsJoinedByString:@" "];
+    NSString *entry = [entryArray componentsJoinedByString:@""];
     
-    NSFileHandle *writer = [NSFileHandle fileHandleForWritingAtPath:medicationLogFilepath];
+    NSFileHandle *writer = [NSFileHandle fileHandleForWritingAtPath:self.medicationLogPath];
     [writer seekToEndOfFile];
     [writer writeData:[entry dataUsingEncoding:NSUTF8StringEncoding]];
 

@@ -10,7 +10,7 @@
 
 @interface LogViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) UITableViewCell *logViewCell;
+@property (strong, nonatomic) NSArray *logEntries;
 @end
 
 @implementation LogViewController
@@ -28,7 +28,6 @@
 {
     [super viewDidLoad];
     
-    
     UINib *nib = [UINib nibWithNibName:@"LogViewCell" bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"kLogViewCell"];
 }
@@ -36,7 +35,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.logEntries = nil;
 }
 
 #pragma mark - Table view data source
@@ -48,7 +47,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [self.logEntries count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,9 +55,19 @@
     static NSString *CellIdentifier = @"kLogViewCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
-    cell.textLabel.text = @"testing";    
+    NSString *rawLogEntryString = self.logEntries[indexPath.row];
+    NSString *formattedEntryString = [rawLogEntryString stringByReplacingOccurrencesOfString:@"\"Medication Taken\"" withString:@""];
+    
+    NSArray *formattedEntryComponents = [[formattedEntryString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] componentsSeparatedByString:@" "];
+    
+    cell.textLabel.text = formattedEntryComponents[1];
+    cell.detailTextLabel.text = formattedEntryComponents[0];
+    
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 75.0f;
 }
 
 #pragma mark - Actions
@@ -68,7 +77,27 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - Properties
 
+- (NSArray*)logEntries
+{
+    if(_logEntries == nil) {
+        
+        NSError *readLogError = nil;
+        
+        NSString *dataStr = [NSString stringWithContentsOfFile:self.medicationLogPath encoding:NSUTF8StringEncoding error:&readLogError];
+        
+        if(readLogError) {
+            NSLog(@"There was an error reading the medication log :%@", [readLogError description]);
+            return nil;
+        }
+        
+        NSMutableArray *logEntries = [NSMutableArray arrayWithArray:[dataStr componentsSeparatedByString: @"\n"]];
+        [logEntries removeLastObject];
+        _logEntries = logEntries;
+    }
+    return _logEntries;
+}
 
 
 
