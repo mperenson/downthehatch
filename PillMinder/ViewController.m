@@ -84,6 +84,8 @@
         NSLog(@"Alarm set");
         
     }];
+    
+    [self writeEntryToCSVFile];
 }
 
 
@@ -112,18 +114,45 @@
     LogViewController *logViewController = [[LogViewController alloc] initWithNibName:logNibName bundle:nil];
     
     [self presentViewController:logViewController animated:YES completion:nil];
+}
+
+
+
+#pragma mark - CSV Processing
+
+- (void) writeEntryToCSVFile
+{
+    NSString *medicationLogFilepath = [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"medication-log.csv"];
     
-    //[self.navigationController pushViewController:logViewController animated:YES];
+    [self createCSVFileIfItDoesntAlreadyExist:medicationLogFilepath];
     
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     
-//    [UIView  transitionWithView:logViewController.view
-//                       duration:0.4f
-//                        options:UIViewAnimationOptionTransitionFlipFromLeft
-//                     animations:^(void) {
-//                         //[self.navigationController pushViewController:logViewController animated:YES];
-//                     }
-//                     completion:nil];
+    NSString *dateString = [formatter stringFromDate:[NSDate date]];
+    NSString *entryString = [@"\"Medication Taken\" " stringByAppendingString:dateString];
     
+    NSArray *entryArray = @[entryString, @"\n"];
+    NSString *entry = [entryArray componentsJoinedByString:@" "];
+    
+    NSFileHandle *writer = [NSFileHandle fileHandleForWritingAtPath:medicationLogFilepath];
+    [writer seekToEndOfFile];
+    [writer writeData:[entry dataUsingEncoding:NSUTF8StringEncoding]];
+
+}
+
+- (void) createCSVFileIfItDoesntAlreadyExist:(NSString*)filePath
+{
+    if(![[NSFileManager defaultManager]  fileExistsAtPath:filePath]) {
+        [[NSFileManager defaultManager] createFileAtPath:filePath contents:nil attributes:nil];
+    }
+}
+
+- (NSString *)applicationDocumentsDirectory {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    return basePath;
 }
 
 
