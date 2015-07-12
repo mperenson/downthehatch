@@ -15,6 +15,7 @@
         <!--View Controller-->
         <scene sceneID="S5R-U7-oPS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zz-g7-J2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="X3g-RZ-bKA" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t1v-WJ-h1Y"/>
@@ -24,12 +25,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="bkgrnd_640x960v3-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="TIi-q6-AMN">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="556" id="qlB-m2-7yY"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-MZ-ggx" userLabel="Container View">
                                 <rect key="frame" x="10" y="196" width="580" height="200"/>
                                 <subviews>
@@ -156,10 +151,8 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="rUi-A0-2QY" secondAttribute="trailing" constant="23" id="1lB-qA-RNs"/>
                             <constraint firstAttribute="trailing" secondItem="bsB-MZ-ggx" secondAttribute="trailing" constant="10" id="8Cz-3t-net"/>
-                            <constraint firstItem="nN0-oQ-Hjh" firstAttribute="top" secondItem="TIi-q6-AMN" secondAttribute="bottom" id="8O2-bt-3gS"/>
                             <constraint firstItem="LNm-So-FVk" firstAttribute="top" secondItem="Aag-1i-3eb" secondAttribute="bottom" constant="8" id="9IJ-Ok-8UL"/>
                             <constraint firstItem="Aag-1i-3eb" firstAttribute="top" secondItem="t1v-WJ-h1Y" secondAttribute="bottom" constant="30" id="Hbs-nF-lV7"/>
-                            <constraint firstItem="TIi-q6-AMN" firstAttribute="leading" secondItem="nN0-oQ-Hjh" secondAttribute="leading" id="IGh-E5-TWA"/>
                             <constraint firstItem="nN0-oQ-Hjh" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" id="Pjr-Ly-bzE"/>
                             <constraint firstItem="bsB-MZ-ggx" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" constant="10" id="QrJ-2p-qLp"/>
                             <constraint firstItem="LNm-So-FVk" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" constant="68" id="Tja-wk-rq0"/>
@@ -168,7 +161,6 @@
                             <constraint firstAttribute="trailing" secondItem="nN0-oQ-Hjh" secondAttribute="trailing" id="V7Y-50-KCB"/>
                             <constraint firstItem="gLQ-5C-G0f" firstAttribute="top" secondItem="rUi-A0-2QY" secondAttribute="bottom" constant="8" id="X72-j6-gqL"/>
                             <constraint firstItem="rUi-A0-2QY" firstAttribute="top" secondItem="t1v-WJ-h1Y" secondAttribute="bottom" constant="30" id="bzW-ko-bmg"/>
-                            <constraint firstItem="TIi-q6-AMN" firstAttribute="trailing" secondItem="nN0-oQ-Hjh" secondAttribute="trailing" id="fVS-in-y3H"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gLQ-5C-G0f" secondAttribute="trailing" constant="52" id="iLe-t9-F1k"/>
                             <constraint firstItem="Aag-1i-3eb" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leadingMargin" constant="52" id="qTb-Xo-MOS"/>
                             <constraint firstItem="nN0-oQ-Hjh" firstAttribute="top" secondItem="bsB-MZ-ggx" secondAttribute="bottom" constant="160" id="s01-fG-JGf"/>
@@ -190,7 +182,6 @@
                         <outlet property="valueLabel" destination="kLl-w6-Tv7" id="8qJ-2R-BEK"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6zz-g7-J2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="336" y="202"/>
         </scene>
@@ -215,6 +206,7 @@
         <!--Timeremaining View Controller-->
         <scene sceneID="dc4-Dy-sf3">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CdL-FC-11E" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="H1d-3a-efN" customClass="TimeremainingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qwz-Sh-QSj"/>
@@ -226,14 +218,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CdL-FC-11E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="336" y="-124"/>
         </scene>
     </scenes>
     <resources>
         <image name="Meal-100.png" width="100" height="100"/>
-        <image name="bkgrnd_640x960v3-2.png" width="640" height="960"/>
         <image name="rx_button_fixed.png" width="100" height="100"/>
     </resources>
 </document>

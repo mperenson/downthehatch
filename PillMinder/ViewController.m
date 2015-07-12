@@ -17,6 +17,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 @property (weak, nonatomic) IBOutlet UIButton *setAlarm;
 
+@property (weak, nonatomic) IBOutlet UIButton *medsButton;
+@property (weak, nonatomic) IBOutlet UIButton *eatButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *lastTapped;
 @property (strong, nonatomic) NSString *medicationLogPath;
 
 @end
@@ -78,6 +82,7 @@
 
 - (IBAction)iconPressed:(id)sender
 {
+    self.lastTapped = sender;
     [UIView animateWithDuration:0.7f animations:^{
         self.stepper.alpha = 1.0f;
         self.valueLabel.alpha = 1.0f;
@@ -85,7 +90,12 @@
         self.setAlarm.alpha = 1.0f;
         
     } completion:^(BOOL finished) {
-        [self scheduleNotification:1 alertBody:kTimeToEatMessage];
+        if (sender == self.medsButton) {
+            [self scheduleNotification:1 alertBody:kTimeToEatMessage];
+        }
+        else {
+            [self scheduleNotification:1 alertBody:kTimeToTakePillsMessage];
+        }
         NSLog(@"Alarm set");
         
     }];
@@ -104,6 +114,10 @@
 
 - (IBAction)setAlarmTapped:(id)sender
 {
+    CGFloat correctedTimeInterval = self.stepper.value;
+    if (self.lastTapped == self.medsButton) {
+        correctedTimeInterval -= 1; //replace with setting here
+    }
     [self scheduleNotification:self.stepper.value alertBody:kScheduleNextDoseMessage];
     self.stepper.alpha = 0.0f;
     self.valueLabel.alpha = 0.0f;
