@@ -61,8 +61,8 @@
 - (void) scheduleNotification:(CGFloat)hoursValue alertBody:(NSString*)alertBody
 {
     // Convert hours to seconds
-    //NSInteger seconds = hoursValue * 60;
-    NSInteger seconds = hoursValue * 3600;
+    NSInteger seconds = hoursValue * 6;
+    //NSInteger seconds = hoursValue * 3600;
     NSLog(@"Setting alarm for %ld seconds", (long)seconds);
     
     // Schedule local notification
@@ -94,7 +94,7 @@
             [self scheduleNotification:1 alertBody:kTimeToEatMessage];
         }
         else {
-            [self scheduleNotification:1 alertBody:kTimeToTakePillsMessage];
+            [self scheduleNotification:1 alertBody:kScheduleNextDoseMessage];
         }
         NSLog(@"Alarm set");
         
@@ -117,8 +117,11 @@
     CGFloat correctedTimeInterval = self.stepper.value;
     if (self.lastTapped == self.medsButton) {
         correctedTimeInterval -= 1; //replace with setting here
+        [self scheduleNotification:correctedTimeInterval alertBody:kScheduleNextDoseMessage];
+    }else{
+        [self scheduleNotification:correctedTimeInterval alertBody:kTimeToEatMessage];
     }
-    [self scheduleNotification:self.stepper.value alertBody:kScheduleNextDoseMessage];
+    
     self.stepper.alpha = 0.0f;
     self.valueLabel.alpha = 0.0f;
     self.instructionLabel.alpha = 0.0f;

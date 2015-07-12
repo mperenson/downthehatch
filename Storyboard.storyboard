@@ -15,7 +15,6 @@
         <!--View Controller-->
         <scene sceneID="S5R-U7-oPS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6zz-g7-J2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="X3g-RZ-bKA" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t1v-WJ-h1Y"/>
@@ -25,6 +24,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bkgrnd_640x960v3-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="z6P-zM-zDc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-MZ-ggx" userLabel="Container View">
                                 <rect key="frame" x="10" y="196" width="580" height="200"/>
                                 <subviews>
@@ -153,6 +155,7 @@
                             <constraint firstAttribute="trailing" secondItem="bsB-MZ-ggx" secondAttribute="trailing" constant="10" id="8Cz-3t-net"/>
                             <constraint firstItem="LNm-So-FVk" firstAttribute="top" secondItem="Aag-1i-3eb" secondAttribute="bottom" constant="8" id="9IJ-Ok-8UL"/>
                             <constraint firstItem="Aag-1i-3eb" firstAttribute="top" secondItem="t1v-WJ-h1Y" secondAttribute="bottom" constant="30" id="Hbs-nF-lV7"/>
+                            <constraint firstItem="z6P-zM-zDc" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" id="Lmg-Wv-d9Z"/>
                             <constraint firstItem="nN0-oQ-Hjh" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" id="Pjr-Ly-bzE"/>
                             <constraint firstItem="bsB-MZ-ggx" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" constant="10" id="QrJ-2p-qLp"/>
                             <constraint firstItem="LNm-So-FVk" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" constant="68" id="Tja-wk-rq0"/>
@@ -162,6 +165,7 @@
                             <constraint firstItem="gLQ-5C-G0f" firstAttribute="top" secondItem="rUi-A0-2QY" secondAttribute="bottom" constant="8" id="X72-j6-gqL"/>
                             <constraint firstItem="rUi-A0-2QY" firstAttribute="top" secondItem="t1v-WJ-h1Y" secondAttribute="bottom" constant="30" id="bzW-ko-bmg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gLQ-5C-G0f" secondAttribute="trailing" constant="52" id="iLe-t9-F1k"/>
+                            <constraint firstItem="nN0-oQ-Hjh" firstAttribute="top" secondItem="z6P-zM-zDc" secondAttribute="bottom" id="kqN-n6-1ZA"/>
                             <constraint firstItem="Aag-1i-3eb" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leadingMargin" constant="52" id="qTb-Xo-MOS"/>
                             <constraint firstItem="nN0-oQ-Hjh" firstAttribute="top" secondItem="bsB-MZ-ggx" secondAttribute="bottom" constant="160" id="s01-fG-JGf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rUi-A0-2QY" secondAttribute="trailing" constant="52" id="srD-jE-b7U"/>
@@ -176,12 +180,15 @@
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="eatButton" destination="rUi-A0-2QY" id="3mn-Ki-R0W"/>
                         <outlet property="instructionLabel" destination="VIE-Bz-GXB" id="hSK-Fx-0zA"/>
+                        <outlet property="medsButton" destination="Aag-1i-3eb" id="f7K-jC-eqM"/>
                         <outlet property="setAlarm" destination="jOk-Df-Cy9" id="ElS-WQ-z6e"/>
                         <outlet property="stepper" destination="98v-du-DIU" id="hFa-qN-lFf"/>
                         <outlet property="valueLabel" destination="kLl-w6-Tv7" id="8qJ-2R-BEK"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zz-g7-J2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="336" y="202"/>
         </scene>
@@ -206,7 +213,6 @@
         <!--Timeremaining View Controller-->
         <scene sceneID="dc4-Dy-sf3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CdL-FC-11E" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="H1d-3a-efN" customClass="TimeremainingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qwz-Sh-QSj"/>
@@ -218,12 +224,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CdL-FC-11E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="336" y="-124"/>
         </scene>
     </scenes>
     <resources>
         <image name="Meal-100.png" width="100" height="100"/>
+        <image name="bkgrnd_640x960v3-2.png" width="640" height="960"/>
         <image name="rx_button_fixed.png" width="100" height="100"/>
     </resources>
 </document>

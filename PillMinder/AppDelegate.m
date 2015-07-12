@@ -73,7 +73,7 @@
     UIAlertView *alertView = nil;
     
     if ([notification.alertBody isEqualToString:kScheduleNextDoseMessage]) {
-        alertView = [[UIAlertView alloc] initWithTitle:kSetNewAlarmMessage
+        alertView = [[UIAlertView alloc] initWithTitle:kScheduleNextDoseMessage
                                                message:@""
                                               delegate:self
                                      cancelButtonTitle:kCloseButtonTitle
