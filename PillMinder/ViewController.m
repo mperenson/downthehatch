@@ -57,9 +57,9 @@
 - (void) scheduleNotification:(CGFloat)hoursValue alertBody:(NSString*)alertBody
 {
     // Convert hours to seconds
-    NSInteger seconds = hoursValue * 60;
-    //NSInteger seconds = hoursValue * 3600;
-    NSLog(@"Setting alarm for %d seconds", seconds);
+    //NSInteger seconds = hoursValue * 60;
+    NSInteger seconds = hoursValue * 3600;
+    NSLog(@"Setting alarm for %ld seconds", (long)seconds);
     
     // Schedule local notification
     

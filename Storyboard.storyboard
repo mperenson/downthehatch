@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="S5R-U7-oPS">
+            <objects>
+                <viewController id="X3g-RZ-bKA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b6N-U4-11j"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Cg-yo-h1c"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l7J-2w-LVf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="bkgrnd_640x960v3-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="TIi-q6-AMN">
+                                <rect key="frame" x="5" y="-7" width="320" height="568"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="568" id="tpo-H1-inU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUi-A0-2QY">
+                                <rect key="frame" x="191" y="65" width="105" height="115"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="J95-k6-C9d"/>
+                                    <constraint firstAttribute="width" constant="291" id="TOY-Nc-MBD"/>
+                                </constraints>
+                                <state key="normal" image="Meal-100.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Take medication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNm-So-FVk">
+                                <rect key="frame" x="8" y="175" width="172" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="1Py-5p-3SV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-MZ-ggx" userLabel="Container View">
+                                <rect key="frame" x="66" y="256" width="204" height="238"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOk-Df-Cy9">
+                                        <rect key="frame" x="24" y="77" width="156" height="33"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                        <state key="normal" title="Set alarm">
+                                            <color key="titleColor" red="0.1176470667" green="0.13333334029999999" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" value="3" minimumValue="2" maximumValue="5" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="98v-du-DIU">
+                                        <rect key="frame" x="55" y="40" width="94" height="29"/>
+                                        <color key="tintColor" red="0.047058828175067902" green="0.40784317255020142" blue="0.94509810209274292" alpha="1" colorSpace="deviceRGB"/>
+                                    </stepper>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="2.5 hours from now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLl-w6-Tv7">
+                                        <rect key="frame" x="34" y="11" width="170" height="21"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="98v-du-DIU" firstAttribute="centerX" secondItem="jOk-Df-Cy9" secondAttribute="centerX" id="QZO-GI-mg3"/>
+                                    <constraint firstItem="kLl-w6-Tv7" firstAttribute="leading" secondItem="bsB-MZ-ggx" secondAttribute="leading" constant="20" symbolic="YES" id="VaV-iO-M8o"/>
+                                    <constraint firstAttribute="trailing" secondItem="kLl-w6-Tv7" secondAttribute="trailing" constant="20" symbolic="YES" id="a68-AK-XFy"/>
+                                    <constraint firstItem="98v-du-DIU" firstAttribute="centerX" secondItem="kLl-w6-Tv7" secondAttribute="centerX" id="ckU-aY-Jml"/>
+                                    <constraint firstItem="kLl-w6-Tv7" firstAttribute="top" secondItem="bsB-MZ-ggx" secondAttribute="top" constant="20" symbolic="YES" id="fVZ-un-K04"/>
+                                    <constraint firstItem="98v-du-DIU" firstAttribute="top" secondItem="bsB-MZ-ggx" secondAttribute="top" constant="67" id="fmR-UV-XRM"/>
+                                    <constraint firstItem="jOk-Df-Cy9" firstAttribute="top" secondItem="bsB-MZ-ggx" secondAttribute="top" constant="129" id="pTg-4O-zyq"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aag-1i-3eb">
+                                <rect key="frame" x="41" y="65" width="105" height="115"/>
+                                <state key="normal" title="Button" image="rx_button_fixed.png"/>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Eat meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6H-ft-ghu">
+                                <rect key="frame" x="165" y="175" width="158" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="4pW-GB-DsF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="10"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="SCHEDULE NEXT MEAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIE-Bz-GXB">
+                                <rect key="frame" x="5" y="219" width="320" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="T3K-ZF-PQW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="28"/>
+                                <color key="textColor" red="0.11764706671237946" green="0.13333334028720856" blue="0.64705884456634521" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bsB-MZ-ggx" firstAttribute="top" secondItem="VIE-Bz-GXB" secondAttribute="bottom" constant="8" symbolic="YES" id="0Dk-Jj-o6i"/>
+                            <constraint firstItem="bsB-MZ-ggx" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" constant="60" id="HkX-dx-blH"/>
+                            <constraint firstItem="VIE-Bz-GXB" firstAttribute="top" secondItem="l7J-2w-LVf" secondAttribute="top" constant="190" id="Iyu-7J-zTb"/>
+                            <constraint firstItem="VIE-Bz-GXB" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" constant="20" symbolic="YES" id="PAH-fb-CMf"/>
+                            <constraint firstItem="LNm-So-FVk" firstAttribute="top" secondItem="l7J-2w-LVf" secondAttribute="top" constant="148" id="QDi-9f-YQi"/>
+                            <constraint firstItem="TIi-q6-AMN" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" id="UjK-oS-gNh"/>
+                            <constraint firstItem="LNm-So-FVk" firstAttribute="trailing" secondItem="rUi-A0-2QY" secondAttribute="trailing" id="Wmg-oW-oHv"/>
+                            <constraint firstItem="rUi-A0-2QY" firstAttribute="top" secondItem="l7J-2w-LVf" secondAttribute="top" constant="72" id="Zuq-zq-Mmi"/>
+                            <constraint firstItem="rUi-A0-2QY" firstAttribute="leading" secondItem="LNm-So-FVk" secondAttribute="leading" id="a5H-VJ-Hs5"/>
+                            <constraint firstAttribute="trailing" secondItem="bsB-MZ-ggx" secondAttribute="trailing" constant="50" id="cAi-mI-nic"/>
+                            <constraint firstAttribute="bottom" secondItem="bsB-MZ-ggx" secondAttribute="bottom" constant="54" id="jU1-bf-XMc"/>
+                            <constraint firstItem="TIi-q6-AMN" firstAttribute="trailing" secondItem="l7J-2w-LVf" secondAttribute="trailing" id="pAq-YI-a7p"/>
+                            <constraint firstItem="TIi-q6-AMN" firstAttribute="top" secondItem="l7J-2w-LVf" secondAttribute="top" id="yAs-6z-fZz"/>
+                            <constraint firstItem="TIi-q6-AMN" firstAttribute="centerX" secondItem="LNm-So-FVk" secondAttribute="centerX" id="zEE-MA-Nbl"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Set intervals" id="hzV-xq-Q0g"/>
+                        <barButtonItem title="Time remaining" id="hCJ-dZ-x16"/>
+                        <barButtonItem title="Log" id="mpT-aT-MSb"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zz-g7-J2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397" y="218"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Meal-100.png" width="100" height="100"/>
+        <image name="bkgrnd_640x960v3-2.png" width="640" height="960"/>
+        <image name="rx_button_fixed.png" width="100" height="100"/>
+    </resources>
+</document>
