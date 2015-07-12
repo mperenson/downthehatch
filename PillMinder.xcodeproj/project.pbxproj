@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		173C5B661B52341C00B394E0 /* IntervalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 173C5B651B52341C00B394E0 /* IntervalViewController.m */; };
 		173C5B691B52354D00B394E0 /* TimeremainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 173C5B681B52354D00B394E0 /* TimeremainingViewController.m */; };
+		173C5B6B1B52EB9E00B394E0 /* Food-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C5B6A1B52EB9E00B394E0 /* Food-50.png */; };
+		173C5B6D1B52EC1700B394E0 /* Food-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C5B6C1B52EC1700B394E0 /* Food-32.png */; };
+		173C5B6F1B52EC9500B394E0 /* Pharmacist-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 173C5B6E1B52EC9500B394E0 /* Pharmacist-50.png */; };
 		174046C117930F0800EB221C /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 174046C017930F0800EB221C /* icon_114.png */; };
 		174046C317930F1000EB221C /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 174046C217930F1000EB221C /* icon_57.png */; };
 		174046C5179321CF00EB221C /* icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 174046C4179321CF00EB221C /* icon_114x114.png */; };
@@ -78,6 +81,9 @@
 		173C5B651B52341C00B394E0 /* IntervalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalViewController.m; sourceTree = "<group>"; };
 		173C5B671B52354D00B394E0 /* TimeremainingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeremainingViewController.h; sourceTree = "<group>"; };
 		173C5B681B52354D00B394E0 /* TimeremainingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeremainingViewController.m; sourceTree = "<group>"; };
+		173C5B6A1B52EB9E00B394E0 /* Food-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Food-50.png"; sourceTree = "<group>"; };
+		173C5B6C1B52EC1700B394E0 /* Food-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Food-32.png"; sourceTree = "<group>"; };
+		173C5B6E1B52EC9500B394E0 /* Pharmacist-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pharmacist-50.png"; sourceTree = "<group>"; };
 		174046C017930F0800EB221C /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
 		174046C217930F1000EB221C /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
 		174046C4179321CF00EB221C /* icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114x114.png; sourceTree = "<group>"; };
@@ -207,6 +213,9 @@
 		178520120000277900DC657F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				173C5B6E1B52EC9500B394E0 /* Pharmacist-50.png */,
+				173C5B6C1B52EC1700B394E0 /* Food-32.png */,
+				173C5B6A1B52EB9E00B394E0 /* Food-50.png */,
 				17EECF831B51F095005F706A /* bkgrnd_640x960v3-2.png */,
 				17EE01C41B51E779009179BA /* rx_button_fixed.png */,
 				17EE01C21B51E74C009179BA /* Meal-100.png */,
@@ -377,11 +386,14 @@
 				178520160000277900DC657F /* InfoPlist.strings in Resources */,
 				178520220000277900DC657F /* ViewController.xib in Resources */,
 				17EE01C51B51E779009179BA /* rx_button_fixed.png in Resources */,
+				173C5B6F1B52EC9500B394E0 /* Pharmacist-50.png in Resources */,
 				17EECF841B51F095005F706A /* bkgrnd_640x960v3-2.png in Resources */,
 				A78F9B3A17924C80004D354C /* LogViewController.xib in Resources */,
 				A78F9B3F17924DA7004D354C /* LogViewCell.xib in Resources */,
 				A78F9B431792640D004D354C /* Default-568h@2x.png in Resources */,
 				17EE01C11B51E5DB009179BA /* Storyboard.storyboard in Resources */,
+				173C5B6D1B52EC1700B394E0 /* Food-32.png in Resources */,
+				173C5B6B1B52EB9E00B394E0 /* Food-50.png in Resources */,
 				174046C117930F0800EB221C /* icon_114.png in Resources */,
 				174046C317930F1000EB221C /* icon_57.png in Resources */,
 				174046C5179321CF00EB221C /* icon_114x114.png in Resources */,

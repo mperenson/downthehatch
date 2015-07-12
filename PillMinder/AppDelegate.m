@@ -24,9 +24,9 @@
 {
 #ifdef __IPHONE_8_0
     //Right, that is the point
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIRemoteNotificationTypeBadge
-                                                                                         |UIRemoteNotificationTypeSound
-                                                                                         |UIRemoteNotificationTypeAlert) categories:nil];
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge
+                                                                                         |UIUserNotificationTypeSound
+                                                                                         |UIUserNotificationTypeAlert) categories:nil];
     [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
 #else
     //register to receive notifications
@@ -112,7 +112,7 @@
 - (void) scheduleNotification:(CGFloat)hoursValue alertBody:(NSString*)alertBody
 {
     // Convert hours to seconds
-    NSInteger seconds = hoursValue * 60;
+    NSInteger seconds = hoursValue * 6;
     
     //NSInteger seconds = hoursValue * 3600;
     NSLog(@"Setting alarm for %ld seconds", (long)seconds);
