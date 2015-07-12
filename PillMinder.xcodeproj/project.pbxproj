@@ -24,6 +24,14 @@
 		17EE01C31B51E74C009179BA /* Meal-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE01C21B51E74C009179BA /* Meal-100.png */; };
 		17EE01C51B51E779009179BA /* rx_button_fixed.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE01C41B51E779009179BA /* rx_button_fixed.png */; };
 		17EECF841B51F095005F706A /* bkgrnd_640x960v3-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EECF831B51F095005F706A /* bkgrnd_640x960v3-2.png */; };
+		29F0B22E1B521BD200250F47 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F0B22D1B521BD200250F47 /* InterfaceController.m */; };
+		29F0B2311B521BD200250F47 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F0B2301B521BD200250F47 /* NotificationController.m */; };
+		29F0B2341B521BD200250F47 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F0B2331B521BD200250F47 /* GlanceController.m */; };
+		29F0B2361B521BD200250F47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29F0B2351B521BD200250F47 /* Images.xcassets */; };
+		29F0B23A1B521BD200250F47 /* PillMinder WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 29F0B2391B521BD200250F47 /* PillMinder WatchKit App.app */; };
+		29F0B2441B521BD200250F47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29F0B2431B521BD200250F47 /* Images.xcassets */; };
+		29F0B2471B521BD200250F47 /* PillMinder WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 29F0B2271B521BD200250F47 /* PillMinder WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		29F0B2501B521CE600250F47 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29F0B24F1B521CE600250F47 /* Interface.storyboard */; };
 		A74D642A17924981004F18BC /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A74D642817924981004F18BC /* LogViewController.m */; };
 		A78F9B3A17924C80004D354C /* LogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78F9B3917924C80004D354C /* LogViewController.xib */; };
 		A78F9B3D17924D91004D354C /* LogViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9B3C17924D91004D354C /* LogViewCell.m */; };
@@ -31,6 +39,37 @@
 		A78F9B41179261FB004D354C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F9B40179261FB004D354C /* MessageUI.framework */; };
 		A78F9B431792640D004D354C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A78F9B421792640D004D354C /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29F0B23B1B521BD200250F47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17851FFE0000277800DC657F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29F0B2381B521BD200250F47;
+			remoteInfo = "PillMinder WatchKit App";
+		};
+		29F0B2451B521BD200250F47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17851FFE0000277800DC657F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29F0B2261B521BD200250F47;
+			remoteInfo = "PillMinder WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		29F0B24E1B521BD200250F47 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				29F0B2471B521BD200250F47 /* PillMinder WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		174046C017930F0800EB221C /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
@@ -55,6 +94,20 @@
 		17EE01C21B51E74C009179BA /* Meal-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Meal-100.png"; sourceTree = "<group>"; };
 		17EE01C41B51E779009179BA /* rx_button_fixed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rx_button_fixed.png; sourceTree = "<group>"; };
 		17EECF831B51F095005F706A /* bkgrnd_640x960v3-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bkgrnd_640x960v3-2.png"; sourceTree = "<group>"; };
+		29F0B2271B521BD200250F47 /* PillMinder WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PillMinder WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29F0B22A1B521BD200250F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29F0B22B1B521BD200250F47 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		29F0B22C1B521BD200250F47 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		29F0B22D1B521BD200250F47 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		29F0B22F1B521BD200250F47 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		29F0B2301B521BD200250F47 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		29F0B2321B521BD200250F47 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		29F0B2331B521BD200250F47 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		29F0B2351B521BD200250F47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		29F0B2391B521BD200250F47 /* PillMinder WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PillMinder WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29F0B23F1B521BD200250F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29F0B2431B521BD200250F47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		29F0B24F1B521CE600250F47 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		A74D642717924981004F18BC /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
 		A74D642817924981004F18BC /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
 		A78F9B3917924C80004D354C /* LogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogViewController.xib; sourceTree = "<group>"; };
@@ -78,6 +131,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29F0B2241B521BD200250F47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,6 +151,8 @@
 				174046C217930F1000EB221C /* icon_57.png */,
 				174046C017930F0800EB221C /* icon_114.png */,
 				178520110000277900DC657F /* PillMinder */,
+				29F0B2281B521BD200250F47 /* PillMinder WatchKit Extension */,
+				29F0B23D1B521BD200250F47 /* PillMinder WatchKit App */,
 				1785200A0000277800DC657F /* Frameworks */,
 				178520080000277800DC657F /* Products */,
 			);
@@ -100,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				178520070000277800DC657F /* PillMinder.app */,
+				29F0B2271B521BD200250F47 /* PillMinder WatchKit Extension.appex */,
+				29F0B2391B521BD200250F47 /* PillMinder WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +209,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		29F0B2281B521BD200250F47 /* PillMinder WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				29F0B22C1B521BD200250F47 /* InterfaceController.h */,
+				29F0B22D1B521BD200250F47 /* InterfaceController.m */,
+				29F0B22F1B521BD200250F47 /* NotificationController.h */,
+				29F0B2301B521BD200250F47 /* NotificationController.m */,
+				29F0B2321B521BD200250F47 /* GlanceController.h */,
+				29F0B2331B521BD200250F47 /* GlanceController.m */,
+				29F0B2351B521BD200250F47 /* Images.xcassets */,
+				29F0B2291B521BD200250F47 /* Supporting Files */,
+			);
+			path = "PillMinder WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		29F0B2291B521BD200250F47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29F0B22A1B521BD200250F47 /* Info.plist */,
+				29F0B22B1B521BD200250F47 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29F0B23D1B521BD200250F47 /* PillMinder WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				29F0B24F1B521CE600250F47 /* Interface.storyboard */,
+				29F0B2431B521BD200250F47 /* Images.xcassets */,
+				29F0B23E1B521BD200250F47 /* Supporting Files */,
+			);
+			path = "PillMinder WatchKit App";
+			sourceTree = "<group>";
+		};
+		29F0B23E1B521BD200250F47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29F0B23F1B521BD200250F47 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A78F9B3817924C49004D354C /* LogViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,15 +274,50 @@
 				178520030000277800DC657F /* Sources */,
 				178520040000277800DC657F /* Frameworks */,
 				178520050000277800DC657F /* Resources */,
+				29F0B24E1B521BD200250F47 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				29F0B2461B521BD200250F47 /* PBXTargetDependency */,
 			);
 			name = PillMinder;
 			productName = PillMinder;
 			productReference = 178520070000277800DC657F /* PillMinder.app */;
 			productType = "com.apple.product-type.application";
+		};
+		29F0B2261B521BD200250F47 /* PillMinder WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29F0B24D1B521BD200250F47 /* Build configuration list for PBXNativeTarget "PillMinder WatchKit Extension" */;
+			buildPhases = (
+				29F0B2231B521BD200250F47 /* Sources */,
+				29F0B2241B521BD200250F47 /* Frameworks */,
+				29F0B2251B521BD200250F47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29F0B23C1B521BD200250F47 /* PBXTargetDependency */,
+			);
+			name = "PillMinder WatchKit Extension";
+			productName = "PillMinder WatchKit Extension";
+			productReference = 29F0B2271B521BD200250F47 /* PillMinder WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		29F0B2381B521BD200250F47 /* PillMinder WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29F0B24C1B521BD200250F47 /* Build configuration list for PBXNativeTarget "PillMinder WatchKit App" */;
+			buildPhases = (
+				29F0B2371B521BD200250F47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PillMinder WatchKit App";
+			productName = "PillMinder WatchKit App";
+			productReference = 29F0B2391B521BD200250F47 /* PillMinder WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
 		};
 /* End PBXNativeTarget section */
 
@@ -189,6 +330,13 @@
 					178520060000277800DC657F = {
 						DevelopmentTeam = 9K2HK78N63;
 					};
+					29F0B2261B521BD200250F47 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 9K2HK78N63;
+					};
+					29F0B2381B521BD200250F47 = {
+						CreatedOnToolsVersion = 6.4;
+					};
 				};
 			};
 			buildConfigurationList = 178520010000277800DC657F /* Build configuration list for PBXProject "PillMinder" */;
@@ -197,6 +345,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 17851FFC0000277800DC657F;
 			productRefGroup = 178520080000277800DC657F /* Products */;
@@ -204,6 +353,8 @@
 			projectRoot = "";
 			targets = (
 				178520060000277800DC657F /* PillMinder */,
+				29F0B2261B521BD200250F47 /* PillMinder WatchKit Extension */,
+				29F0B2381B521BD200250F47 /* PillMinder WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +381,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29F0B2251B521BD200250F47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29F0B23A1B521BD200250F47 /* PillMinder WatchKit App.app in Resources */,
+				29F0B2361B521BD200250F47 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29F0B2371B521BD200250F47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29F0B2501B521CE600250F47 /* Interface.storyboard in Resources */,
+				29F0B2441B521BD200250F47 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -245,7 +414,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29F0B2231B521BD200250F47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29F0B2311B521BD200250F47 /* NotificationController.m in Sources */,
+				29F0B22E1B521BD200250F47 /* InterfaceController.m in Sources */,
+				29F0B2341B521BD200250F47 /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29F0B23C1B521BD200250F47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29F0B2381B521BD200250F47 /* PillMinder WatchKit App */;
+			targetProxy = 29F0B23B1B521BD200250F47 /* PBXContainerItemProxy */;
+		};
+		29F0B2461B521BD200250F47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29F0B2261B521BD200250F47 /* PillMinder WatchKit Extension */;
+			targetProxy = 29F0B2451B521BD200250F47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		178520140000277900DC657F /* InfoPlist.strings */ = {
@@ -299,7 +491,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -330,7 +522,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -345,7 +537,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PillMinder/PillMinder-Prefix.pch";
 				INFOPLIST_FILE = "PillMinder/PillMinder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -362,12 +554,114 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PillMinder/PillMinder-Prefix.pch";
 				INFOPLIST_FILE = "PillMinder/PillMinder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		29F0B2481B521BD200250F47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "PillMinder WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		29F0B2491B521BD200250F47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "PillMinder WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		29F0B24A1B521BD200250F47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = PillMinder_WatchKit_Extension;
+				INFOPLIST_FILE = "PillMinder WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		29F0B24B1B521BD200250F47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IBSC_MODULE = PillMinder_WatchKit_Extension;
+				INFOPLIST_FILE = "PillMinder WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
 			name = Release;
 		};
@@ -391,6 +685,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		29F0B24C1B521BD200250F47 /* Build configuration list for PBXNativeTarget "PillMinder WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29F0B24A1B521BD200250F47 /* Debug */,
+				29F0B24B1B521BD200250F47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		29F0B24D1B521BD200250F47 /* Build configuration list for PBXNativeTarget "PillMinder WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29F0B2481B521BD200250F47 /* Debug */,
+				29F0B2491B521BD200250F47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

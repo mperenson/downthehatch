@@ -11,6 +11,10 @@
 #import "ViewController.h"
 #import "Constants.h"
 
+@interface AppDelegate ()
+@property (strong, nonatomic) NSMutableArray *tempCounterData;
+@end
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -18,6 +22,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#ifdef __IPHONE_8_0
+    //Right, that is the point
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIRemoteNotificationTypeBadge
+                                                                                         |UIRemoteNotificationTypeSound
+                                                                                         |UIRemoteNotificationTypeAlert) categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+#else
+    //register to receive notifications
+    UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
+#endif
     //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     //self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
@@ -76,4 +91,42 @@
     [alertView show];
 }
 
+- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void(^)(NSDictionary *replyInfo))reply {
+    
+    reply(@{@"insert counter value":@(1)});
+    
+    NSString *counterValue = [userInfo objectForKey:@"counterValue"];
+    if (!self.tempCounterData) {
+        self.tempCounterData = [[NSMutableArray alloc] init];
+    }
+    
+    [self.tempCounterData addObject:counterValue];
+    
+    [self scheduleNotification:[counterValue intValue] alertBody:kScheduleNextDoseMessage];
+    
+    
+    
+    
+}
+
+- (void) scheduleNotification:(CGFloat)hoursValue alertBody:(NSString*)alertBody
+{
+    // Convert hours to seconds
+    NSInteger seconds = hoursValue * 60;
+    
+    //NSInteger seconds = hoursValue * 3600;
+    NSLog(@"Setting alarm for %ld seconds", (long)seconds);
+    
+    // Schedule local notification
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = alertBody;
+    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:seconds];
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    
+    NSLog(@"Local Notification %@", notification);
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    //[[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+}
 @end
