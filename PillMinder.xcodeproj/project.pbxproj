@@ -20,7 +20,6 @@
 		1785201C0000277900DC657F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1785201B0000277900DC657F /* AppDelegate.m */; };
 		1785201F0000277900DC657F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1785201E0000277900DC657F /* ViewController.m */; };
 		178520220000277900DC657F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 178520200000277900DC657F /* ViewController.xib */; };
-		17940A0C1932D2440096E668 /* ViewController in Resources */ = {isa = PBXBuildFile; fileRef = 17940A0B1932D2440096E668 /* ViewController */; };
 		17EE01C11B51E5DB009179BA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EE01C01B51E5DB009179BA /* Storyboard.storyboard */; };
 		17EE01C31B51E74C009179BA /* Meal-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE01C21B51E74C009179BA /* Meal-100.png */; };
 		17EE01C51B51E779009179BA /* rx_button_fixed.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE01C41B51E779009179BA /* rx_button_fixed.png */; };
@@ -52,7 +51,6 @@
 		1785201D0000277900DC657F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1785201E0000277900DC657F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		178520210000277900DC657F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		17940A0B1932D2440096E668 /* ViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ViewController; sourceTree = "<group>"; };
 		17EE01C01B51E5DB009179BA /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		17EE01C21B51E74C009179BA /* Meal-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Meal-100.png"; sourceTree = "<group>"; };
 		17EE01C41B51E779009179BA /* rx_button_fixed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rx_button_fixed.png; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				1785201B0000277900DC657F /* AppDelegate.m */,
 				1785201D0000277900DC657F /* ViewController.h */,
 				1785201E0000277900DC657F /* ViewController.m */,
-				17940A0B1932D2440096E668 /* ViewController */,
 				178520200000277900DC657F /* ViewController.xib */,
 				A78F9B3817924C49004D354C /* LogViewController */,
 				178520120000277900DC657F /* Supporting Files */,
@@ -188,6 +185,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
+				TargetAttributes = {
+					178520060000277800DC657F = {
+						DevelopmentTeam = 9K2HK78N63;
+					};
+				};
 			};
 			buildConfigurationList = 178520010000277800DC657F /* Build configuration list for PBXProject "PillMinder" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -225,7 +227,6 @@
 				174046C71793223300EB221C /* icon_57x57.png in Resources */,
 				17EE01C31B51E74C009179BA /* Meal-100.png in Resources */,
 				174046CF179331BC00EB221C /* bkgrnd_640x960v3.png in Resources */,
-				17940A0C1932D2440096E668 /* ViewController in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
