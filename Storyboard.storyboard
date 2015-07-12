@@ -24,8 +24,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bkgrnd_640x960v3-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="z6P-zM-zDc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkgrnd_640x960v3-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="z6P-zM-zDc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="556" id="IIf-UB-ajb"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-MZ-ggx" userLabel="Container View">
                                 <rect key="frame" x="10" y="196" width="580" height="200"/>
@@ -155,7 +159,6 @@
                             <constraint firstAttribute="trailing" secondItem="bsB-MZ-ggx" secondAttribute="trailing" constant="10" id="8Cz-3t-net"/>
                             <constraint firstItem="LNm-So-FVk" firstAttribute="top" secondItem="Aag-1i-3eb" secondAttribute="bottom" constant="8" id="9IJ-Ok-8UL"/>
                             <constraint firstItem="Aag-1i-3eb" firstAttribute="top" secondItem="t1v-WJ-h1Y" secondAttribute="bottom" constant="30" id="Hbs-nF-lV7"/>
-                            <constraint firstItem="z6P-zM-zDc" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" id="Lmg-Wv-d9Z"/>
                             <constraint firstItem="nN0-oQ-Hjh" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" id="Pjr-Ly-bzE"/>
                             <constraint firstItem="bsB-MZ-ggx" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" constant="10" id="QrJ-2p-qLp"/>
                             <constraint firstItem="LNm-So-FVk" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leading" constant="68" id="Tja-wk-rq0"/>
@@ -165,10 +168,12 @@
                             <constraint firstItem="gLQ-5C-G0f" firstAttribute="top" secondItem="rUi-A0-2QY" secondAttribute="bottom" constant="8" id="X72-j6-gqL"/>
                             <constraint firstItem="rUi-A0-2QY" firstAttribute="top" secondItem="t1v-WJ-h1Y" secondAttribute="bottom" constant="30" id="bzW-ko-bmg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gLQ-5C-G0f" secondAttribute="trailing" constant="52" id="iLe-t9-F1k"/>
-                            <constraint firstItem="nN0-oQ-Hjh" firstAttribute="top" secondItem="z6P-zM-zDc" secondAttribute="bottom" id="kqN-n6-1ZA"/>
+                            <constraint firstItem="z6P-zM-zDc" firstAttribute="bottom" secondItem="nN0-oQ-Hjh" secondAttribute="top" id="ibg-yo-s8Y"/>
+                            <constraint firstItem="z6P-zM-zDc" firstAttribute="trailing" secondItem="nN0-oQ-Hjh" secondAttribute="trailing" id="jOu-r5-7fO"/>
                             <constraint firstItem="Aag-1i-3eb" firstAttribute="leading" secondItem="l7J-2w-LVf" secondAttribute="leadingMargin" constant="52" id="qTb-Xo-MOS"/>
                             <constraint firstItem="nN0-oQ-Hjh" firstAttribute="top" secondItem="bsB-MZ-ggx" secondAttribute="bottom" constant="160" id="s01-fG-JGf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rUi-A0-2QY" secondAttribute="trailing" constant="52" id="srD-jE-b7U"/>
+                            <constraint firstItem="z6P-zM-zDc" firstAttribute="leading" secondItem="nN0-oQ-Hjh" secondAttribute="leading" id="zPM-IJ-iAr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -195,6 +200,7 @@
         <!--Interval View Controller-->
         <scene sceneID="arp-Mt-3PA">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPP-ol-d0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="V9V-Bc-ms3" customClass="IntervalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aVh-HR-PGW"/>
@@ -203,12 +209,55 @@
                     <view key="view" contentMode="scaleToFill" id="jt4-9B-2qT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bkgrnd_640x960v3.png" translatesAutoresizingMaskIntoConstraints="NO" id="JHt-4r-2L7">
+                                <rect key="frame" x="0.0" y="-165" width="600" height="780"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwu-EP-SbE">
+                                <rect key="frame" x="73" y="421" width="455" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" red="0.1176470667" green="0.13333334029999999" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rx_button_fixed.png" translatesAutoresizingMaskIntoConstraints="NO" id="wrR-pz-6uo">
+                                <rect key="frame" x="87" y="253" width="128" height="114"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="28I-4E-3Mp">
+                                <rect key="frame" x="57" y="28" width="512" height="121"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Set Interval: Adjust the programmed time for alerts generated by pressing each button on the main screen. For example, if you need to take medication one hour before eating, adjust the value above Rx to one hour. If you need to take medication one hour after eating, change the value above the eat button accordingly.</string>
+                                <color key="textColor" red="0.1176470667" green="0.13333334029999999" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="h6a-RE-8PN">
+                                <rect key="frame" x="99" y="210" width="94" height="29"/>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ymn-uy-gK0">
+                                <rect key="frame" x="396" y="210" width="94" height="29"/>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 hour before meal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuo-zq-6W8">
+                                <rect key="frame" x="63" y="172" width="233" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 hour after meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ids-XB-hks">
+                                <rect key="frame" x="349" y="172" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Meal-100.png" highlightedImage="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="sEz-G1-WFh">
+                                <rect key="frame" x="380" y="253" width="127" height="114"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jPP-ol-d0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="197"/>
+            <point key="canvasLocation" x="987" y="215"/>
         </scene>
         <!--Timeremaining View Controller-->
         <scene sceneID="dc4-Dy-sf3">
@@ -230,8 +279,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Default.png" width="640" height="960"/>
         <image name="Meal-100.png" width="100" height="100"/>
         <image name="bkgrnd_640x960v3-2.png" width="640" height="960"/>
+        <image name="bkgrnd_640x960v3.png" width="640" height="960"/>
         <image name="rx_button_fixed.png" width="100" height="100"/>
     </resources>
 </document>
