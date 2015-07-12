@@ -45,7 +45,7 @@
         NSLog(@"%@ %@",replyInfo, error);
     }];
     
-  //  [self performSegueWithIdentifier:@"alarmSetSegue" sender:nil];
+    [self presentControllerWithName:@"alarmSetInterface" context:counterString];
 }
 
 
@@ -64,28 +64,7 @@
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
 }
-/*
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"alarmSetSegue"])
-    {
-        AlarmSetInterfaceController *controller = (AlarmSetInterfaceController*)[segue destinationViewController];
-        
-       // controller.delegate = self;
-        
-        [controller.alarmSetLabel setText:@"hsdshdfkjhs"];
-        
-//        if ([sender isKindOfClass:[NSString class]]) {
-//            
-//            NSString *subword = (NSString*)sender;
-//            
-//            controller.currentString = subword;
-//        }
-        
-      //  controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    }
-}
-*/
+
 @end
 
 

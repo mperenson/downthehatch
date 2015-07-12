@@ -14,9 +14,9 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
-  //  NSString *counterValue = [userInfo objectForKey:@"counterValue"];
+    [self setTitle:@"Alarm Set!!!"];
     
-    [self.alarmSetLabel setText:@"Med in 1 hour"];
+    [self.alarmSetLabel setText:[NSString stringWithFormat:@"Med in %@ hour(s)", context]];
     
     // Configure interface objects here.
 }

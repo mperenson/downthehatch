@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="457" y="299"/>
         </scene>
-        <!--Alarm Set Interface Controller-->
+        <!--alarmSetInterface-->
         <scene sceneID="NA7-gT-3QU">
             <objects>
-                <controller id="42H-nS-IKw" customClass="AlarmSetInterfaceController">
+                <controller identifier="alarmSetInterface" id="42H-nS-IKw" customClass="AlarmSetInterfaceController">
                     <items>
                         <label width="136" height="149" alignment="left" text="Alarm Set" textAlignment="center" id="h7N-Vs-Wai">
                             <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
