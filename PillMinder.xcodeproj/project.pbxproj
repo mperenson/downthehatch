@@ -37,6 +37,7 @@
 		29F0B2441B521BD200250F47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29F0B2431B521BD200250F47 /* Images.xcassets */; };
 		29F0B2471B521BD200250F47 /* PillMinder WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 29F0B2271B521BD200250F47 /* PillMinder WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		29F0B2501B521CE600250F47 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29F0B24F1B521CE600250F47 /* Interface.storyboard */; };
+		29F0B2531B53051E00250F47 /* AlarmSetInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F0B2521B53051E00250F47 /* AlarmSetInterfaceController.m */; };
 		A74D642A17924981004F18BC /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A74D642817924981004F18BC /* LogViewController.m */; };
 		A78F9B3A17924C80004D354C /* LogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78F9B3917924C80004D354C /* LogViewController.xib */; };
 		A78F9B3D17924D91004D354C /* LogViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9B3C17924D91004D354C /* LogViewCell.m */; };
@@ -120,6 +121,8 @@
 		29F0B23F1B521BD200250F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29F0B2431B521BD200250F47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		29F0B24F1B521CE600250F47 /* Interface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		29F0B2511B53051E00250F47 /* AlarmSetInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmSetInterfaceController.h; sourceTree = "<group>"; };
+		29F0B2521B53051E00250F47 /* AlarmSetInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmSetInterfaceController.m; sourceTree = "<group>"; };
 		A74D642717924981004F18BC /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
 		A74D642817924981004F18BC /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
 		A78F9B3917924C80004D354C /* LogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogViewController.xib; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				29F0B2331B521BD200250F47 /* GlanceController.m */,
 				29F0B2351B521BD200250F47 /* Images.xcassets */,
 				29F0B2291B521BD200250F47 /* Supporting Files */,
+				29F0B2511B53051E00250F47 /* AlarmSetInterfaceController.h */,
+				29F0B2521B53051E00250F47 /* AlarmSetInterfaceController.m */,
 			);
 			path = "PillMinder WatchKit Extension";
 			sourceTree = "<group>";
@@ -444,6 +449,7 @@
 			files = (
 				29F0B2311B521BD200250F47 /* NotificationController.m in Sources */,
 				29F0B22E1B521BD200250F47 /* InterfaceController.m in Sources */,
+				29F0B2531B53051E00250F47 /* AlarmSetInterfaceController.m in Sources */,
 				29F0B2341B521BD200250F47 /* GlanceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

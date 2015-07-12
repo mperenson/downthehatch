@@ -9,6 +9,8 @@
 
 #import "InterfaceController.h"
 
+#import "AlarmSetInterfaceController.h"
+
 
 @interface InterfaceController()
 
@@ -42,12 +44,14 @@
     [WKInterfaceController openParentApplication:applicationData reply:^(NSDictionary *replyInfo, NSError *error) {
         NSLog(@"%@ %@",replyInfo, error);
     }];
+    
+  //  [self performSegueWithIdentifier:@"alarmSetSegue" sender:nil];
 }
 
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    
+    self.counter = 1;
     // Configure interface objects here.
 }
 
@@ -59,6 +63,27 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"alarmSetSegue"])
+    {
+        AlarmSetInterfaceController *controller = (AlarmSetInterfaceController*)[segue destinationViewController];
+        
+       // controller.delegate = self;
+        
+        [controller.alarmSetLabel setText:@"hsdshdfkjhs"];
+        
+//        if ([sender isKindOfClass:[NSString class]]) {
+//            
+//            NSString *subword = (NSString*)sender;
+//            
+//            controller.currentString = subword;
+//        }
+        
+      //  controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    }
 }
 
 @end
