@@ -35,7 +35,6 @@
                             <color key="backgroundColor" red="0.015686275440000001" green="0.43529415129999999" blue="0.50980395079999996" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
                                 <action selector="scheduleAlarm" destination="AgC-eL-Hgc" id="wcN-NE-dkc"/>
-                                <segue destination="42H-nS-IKw" kind="push" identifier="alarmSetSegue" id="uew-qX-0ej"/>
                             </connections>
                         </button>
                     </items>

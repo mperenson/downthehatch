@@ -64,7 +64,7 @@
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
 }
-
+/*
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"alarmSetSegue"])
@@ -85,7 +85,7 @@
       //  controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     }
 }
-
+*/
 @end
 
 
