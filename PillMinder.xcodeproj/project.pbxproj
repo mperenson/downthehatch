@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173C5B661B52341C00B394E0 /* IntervalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 173C5B651B52341C00B394E0 /* IntervalViewController.m */; };
+		173C5B691B52354D00B394E0 /* TimeremainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 173C5B681B52354D00B394E0 /* TimeremainingViewController.m */; };
 		174046C117930F0800EB221C /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 174046C017930F0800EB221C /* icon_114.png */; };
 		174046C317930F1000EB221C /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 174046C217930F1000EB221C /* icon_57.png */; };
 		174046C5179321CF00EB221C /* icon_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 174046C4179321CF00EB221C /* icon_114x114.png */; };
@@ -72,6 +74,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		173C5B641B52341C00B394E0 /* IntervalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalViewController.h; sourceTree = "<group>"; };
+		173C5B651B52341C00B394E0 /* IntervalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalViewController.m; sourceTree = "<group>"; };
+		173C5B671B52354D00B394E0 /* TimeremainingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeremainingViewController.h; sourceTree = "<group>"; };
+		173C5B681B52354D00B394E0 /* TimeremainingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeremainingViewController.m; sourceTree = "<group>"; };
 		174046C017930F0800EB221C /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
 		174046C217930F1000EB221C /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
 		174046C4179321CF00EB221C /* icon_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114x114.png; sourceTree = "<group>"; };
@@ -182,6 +188,10 @@
 		178520110000277900DC657F /* PillMinder */ = {
 			isa = PBXGroup;
 			children = (
+				173C5B671B52354D00B394E0 /* TimeremainingViewController.h */,
+				173C5B681B52354D00B394E0 /* TimeremainingViewController.m */,
+				173C5B641B52341C00B394E0 /* IntervalViewController.h */,
+				173C5B651B52341C00B394E0 /* IntervalViewController.m */,
 				A78F9B4417930B64004D354C /* Constants.h */,
 				1785201A0000277900DC657F /* AppDelegate.h */,
 				1785201B0000277900DC657F /* AppDelegate.m */,
@@ -407,6 +417,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				178520180000277900DC657F /* main.m in Sources */,
+				173C5B691B52354D00B394E0 /* TimeremainingViewController.m in Sources */,
+				173C5B661B52341C00B394E0 /* IntervalViewController.m in Sources */,
 				1785201C0000277900DC657F /* AppDelegate.m in Sources */,
 				1785201F0000277900DC657F /* ViewController.m in Sources */,
 				A74D642A17924981004F18BC /* LogViewController.m in Sources */,
@@ -541,7 +553,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -558,7 +570,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -693,6 +705,7 @@
 				29F0B24B1B521BD200250F47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29F0B24D1B521BD200250F47 /* Build configuration list for PBXNativeTarget "PillMinder WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -701,6 +714,7 @@
 				29F0B2491B521BD200250F47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
