@@ -55,8 +55,10 @@
 {
     static NSString *CellIdentifier = @"kLogViewCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    NSString *rawLogEntryString = self.logEntries[indexPath.row];
+   
+    NSInteger flippedindex=[self.logEntries count]-1-indexPath.row;
+
+    NSString *rawLogEntryString = self.logEntries[flippedindex];
     NSString *formattedEntryString = [rawLogEntryString stringByReplacingOccurrencesOfString:@"\"Medication Taken\"" withString:@""];
     
     NSArray *formattedEntryComponents = [[formattedEntryString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] componentsSeparatedByString:@" "];

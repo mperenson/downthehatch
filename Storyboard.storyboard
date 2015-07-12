@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X3g-RZ-bKA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X3g-RZ-bKA">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,7 +15,7 @@
         <!--View Controller-->
         <scene sceneID="S5R-U7-oPS">
             <objects>
-                <viewController id="X3g-RZ-bKA" sceneMemberID="viewController">
+                <viewController id="X3g-RZ-bKA" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t1v-WJ-h1Y"/>
                         <viewControllerLayoutGuide type="bottom" id="r9r-rA-Jr9"/>
@@ -40,6 +39,9 @@
                                     <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" autorepeat="NO" value="3" minimumValue="2" maximumValue="5" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="98v-du-DIU">
                                         <rect key="frame" x="243" y="72" width="94" height="29"/>
                                         <color key="tintColor" red="0.047058828175067902" green="0.40784317255020142" blue="0.94509810209274292" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <action selector="stepperChanged:" destination="X3g-RZ-bKA" eventType="valueChanged" id="ZfE-Rp-dgS"/>
+                                        </connections>
                                     </stepper>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOk-Df-Cy9">
                                         <rect key="frame" x="230" y="111" width="120" height="37"/>
@@ -52,6 +54,9 @@
                                             <color key="titleColor" red="0.1176470667" green="0.13333334029999999" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setAlarmTapped:" destination="X3g-RZ-bKA" eventType="touchUpInside" id="oVh-IT-SNY"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SCHEDULE NEXT MEAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIE-Bz-GXB">
                                         <rect key="frame" x="0.0" y="0.0" width="580" height="40"/>
@@ -75,15 +80,18 @@
                                     <constraint firstAttribute="trailing" secondItem="VIE-Bz-GXB" secondAttribute="trailing" id="yxf-hj-jkh"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aag-1i-3eb">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aag-1i-3eb">
                                 <rect key="frame" x="68" y="50" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="8jS-yR-njy"/>
                                     <constraint firstAttribute="width" constant="120" id="lsA-YN-H49"/>
                                 </constraints>
                                 <state key="normal" image="rx_button_fixed.png"/>
+                                <connections>
+                                    <action selector="iconPressed:" destination="X3g-RZ-bKA" eventType="touchUpInside" id="UGc-4g-vng"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUi-A0-2QY">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUi-A0-2QY">
                                 <rect key="frame" x="412" y="50" width="120" height="120"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -93,13 +101,20 @@
                                 <state key="normal" image="Meal-100.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iconPressed:" destination="X3g-RZ-bKA" eventType="touchUpInside" id="5lm-hW-R2l"/>
+                                </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nN0-oQ-Hjh">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem title="Set interval" style="plain" id="j8p-NK-TuJ"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="J74-pY-DH5"/>
-                                    <barButtonItem title="Log" id="zxP-cV-M2u"/>
+                                    <barButtonItem title="Log" id="zxP-cV-M2u">
+                                        <connections>
+                                            <action selector="logButtonTapped:" destination="X3g-RZ-bKA" id="GpQ-QV-fPx"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nWV-DA-Lzz"/>
                                     <barButtonItem title="Time remaining" id="Oyz-pX-XWV"/>
                                 </items>
@@ -115,7 +130,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eat meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLQ-5C-G0f">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Eat meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLQ-5C-G0f">
                                 <rect key="frame" x="412" y="178" width="120" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Xv4-iZ-CML"/>
@@ -155,6 +170,12 @@
                     </view>
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="instructionLabel" destination="VIE-Bz-GXB" id="hSK-Fx-0zA"/>
+                        <outlet property="setAlarm" destination="jOk-Df-Cy9" id="ElS-WQ-z6e"/>
+                        <outlet property="stepper" destination="98v-du-DIU" id="hFa-qN-lFf"/>
+                        <outlet property="valueLabel" destination="kLl-w6-Tv7" id="8qJ-2R-BEK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zz-g7-J2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

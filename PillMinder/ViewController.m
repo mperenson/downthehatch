@@ -76,7 +76,7 @@
 
 #pragma mark - Actions
 
-- (IBAction)downTheHatchPressed:(id)sender
+- (IBAction)iconPressed:(id)sender
 {
     [UIView animateWithDuration:0.7f animations:^{
         self.stepper.alpha = 1.0f;
