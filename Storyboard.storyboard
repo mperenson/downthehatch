@@ -12,6 +12,74 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Alarms list-->
+        <scene sceneID="U9c-kI-y6P">
+            <objects>
+                <tableViewController id="x8R-Tm-eeP" customClass="AlarmsManagerTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8M4-Qv-BS1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="currentAlarmCell" textLabel="Rjl-B4-uA1" detailTextLabel="joz-7b-nKD" style="IBUITableViewCellStyleValue1" id="X6A-fq-yFc">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X6A-fq-yFc" id="Djh-r8-uEN">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rjl-B4-uA1">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="joz-7b-nKD">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="x8R-Tm-eeP" id="jcM-b0-boV"/>
+                            <outlet property="delegate" destination="x8R-Tm-eeP" id="7yq-xf-8gh"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Alarms list" id="ndZ-9o-pfv">
+                        <barButtonItem key="rightBarButtonItem" title="Back" id="wjd-2x-3t3">
+                            <connections>
+                                <segue destination="Ryw-lX-fNE" kind="unwind" unwindAction="gotoMainViewControllerToo:" id="QsK-0s-hKf"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="backBarButtonItem" destination="wjd-2x-3t3" id="SH4-7p-OGa"/>
+                        </connections>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7S-sh-np0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="931"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q1s-Bc-zXj">
+            <objects>
+                <navigationController id="2Qo-xF-PEA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YQM-6W-MmT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x8R-Tm-eeP" kind="relationship" relationship="rootViewController" id="BFF-fV-AYa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="baf-49-pMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="761" y="1023"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="S5R-U7-oPS">
             <objects>
@@ -126,7 +194,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="nWV-DA-Lzz"/>
                                     <barButtonItem title="Time remaining" id="Oyz-pX-XWV">
                                         <connections>
-                                            <segue destination="H1d-3a-efN" kind="presentation" id="jHA-Fn-gtP"/>
+                                            <segue destination="2Qo-xF-PEA" kind="presentation" id="jK1-u9-4sg"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -196,7 +264,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zz-g7-J2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ryw-lX-fNE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="336" y="202"/>
+            <point key="canvasLocation" x="-120" y="206"/>
         </scene>
         <!--Interval View Controller-->
         <scene sceneID="arp-Mt-3PA">
@@ -230,7 +298,7 @@
                                     <constraint firstAttribute="height" constant="18" id="Qey-xK-zNN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meal-100.png" highlightedImage="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="sEz-G1-WFh">
@@ -263,7 +331,7 @@
                                     <constraint firstAttribute="height" constant="27" id="T8W-q9-Mou"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -322,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdL-FC-11E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1208" y="-618"/>
+            <point key="canvasLocation" x="-108" y="-526"/>
         </scene>
     </scenes>
     <resources>

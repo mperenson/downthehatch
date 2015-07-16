@@ -29,6 +29,7 @@
 		17EE01C31B51E74C009179BA /* Meal-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE01C21B51E74C009179BA /* Meal-100.png */; };
 		17EE01C51B51E779009179BA /* rx_button_fixed.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EE01C41B51E779009179BA /* rx_button_fixed.png */; };
 		17EECF841B51F095005F706A /* bkgrnd_640x960v3-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EECF831B51F095005F706A /* bkgrnd_640x960v3-2.png */; };
+		29CA42951B58412E0099F329 /* AlarmsManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CA42941B58412E0099F329 /* AlarmsManagerTableViewController.m */; };
 		29F0B22E1B521BD200250F47 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F0B22D1B521BD200250F47 /* InterfaceController.m */; };
 		29F0B2311B521BD200250F47 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F0B2301B521BD200250F47 /* NotificationController.m */; };
 		29F0B2341B521BD200250F47 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F0B2331B521BD200250F47 /* GlanceController.m */; };
@@ -107,6 +108,8 @@
 		17EE01C21B51E74C009179BA /* Meal-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Meal-100.png"; sourceTree = "<group>"; };
 		17EE01C41B51E779009179BA /* rx_button_fixed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rx_button_fixed.png; sourceTree = "<group>"; };
 		17EECF831B51F095005F706A /* bkgrnd_640x960v3-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bkgrnd_640x960v3-2.png"; sourceTree = "<group>"; };
+		29CA42931B58412E0099F329 /* AlarmsManagerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmsManagerTableViewController.h; sourceTree = "<group>"; };
+		29CA42941B58412E0099F329 /* AlarmsManagerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmsManagerTableViewController.m; sourceTree = "<group>"; };
 		29F0B2271B521BD200250F47 /* PillMinder WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PillMinder WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29F0B22A1B521BD200250F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29F0B22B1B521BD200250F47 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				178520200000277900DC657F /* ViewController.xib */,
 				A78F9B3817924C49004D354C /* LogViewController */,
 				178520120000277900DC657F /* Supporting Files */,
+				29CA42931B58412E0099F329 /* AlarmsManagerTableViewController.h */,
+				29CA42941B58412E0099F329 /* AlarmsManagerTableViewController.m */,
 			);
 			path = PillMinder;
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 				178520180000277900DC657F /* main.m in Sources */,
 				173C5B691B52354D00B394E0 /* TimeremainingViewController.m in Sources */,
 				173C5B661B52341C00B394E0 /* IntervalViewController.m in Sources */,
+				29CA42951B58412E0099F329 /* AlarmsManagerTableViewController.m in Sources */,
 				1785201C0000277900DC657F /* AppDelegate.m in Sources */,
 				1785201F0000277900DC657F /* ViewController.m in Sources */,
 				A74D642A17924981004F18BC /* LogViewController.m in Sources */,
