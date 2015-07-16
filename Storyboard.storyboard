@@ -225,7 +225,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour before meal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuo-zq-6W8">
-                                <rect key="frame" x="15" y="259" width="149" height="18"/>
+                                <rect key="frame" x="15" y="183" width="149" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="Qey-xK-zNN"/>
                                 </constraints>
@@ -234,13 +234,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meal-100.png" highlightedImage="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="sEz-G1-WFh">
-                                <rect key="frame" x="457" y="326" width="100" height="100"/>
+                                <rect key="frame" x="457" y="250" width="100" height="100"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rx_button_fixed.png" translatesAutoresizingMaskIntoConstraints="NO" id="wrR-pz-6uo">
-                                <rect key="frame" x="43" y="326" width="100" height="100"/>
+                                <rect key="frame" x="43" y="250" width="100" height="100"/>
                             </imageView>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="h6a-RE-8PN">
-                                <rect key="frame" x="42" y="285" width="94" height="29"/>
+                                <rect key="frame" x="42" y="209" width="94" height="29"/>
                             </stepper>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqf-zy-r9e">
                                 <rect key="frame" x="0.0" y="15" width="600" height="44"/>
@@ -255,10 +255,10 @@
                                 </items>
                             </navigationBar>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ymn-uy-gK0">
-                                <rect key="frame" x="464" y="285" width="94" height="29"/>
+                                <rect key="frame" x="464" y="209" width="94" height="29"/>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour after meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ids-XB-hks">
-                                <rect key="frame" x="434" y="254" width="147" height="27"/>
+                                <rect key="frame" x="434" y="178" width="147" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="T8W-q9-Mou"/>
                                 </constraints>
@@ -270,7 +270,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JHt-4r-2L7" firstAttribute="top" secondItem="jt4-9B-2qT" secondAttribute="top" id="1kb-sq-xeI"/>
-                            <constraint firstItem="4oi-fh-PdM" firstAttribute="top" secondItem="sEz-G1-WFh" secondAttribute="bottom" constant="174" id="2Fy-ha-evz"/>
+                            <constraint firstItem="4oi-fh-PdM" firstAttribute="top" secondItem="sEz-G1-WFh" secondAttribute="bottom" constant="250" id="2Fy-ha-evz"/>
                             <constraint firstItem="h6a-RE-8PN" firstAttribute="leading" secondItem="jt4-9B-2qT" secondAttribute="leading" constant="42" id="5Ht-5O-3v7"/>
                             <constraint firstItem="Tqf-zy-r9e" firstAttribute="top" secondItem="jt4-9B-2qT" secondAttribute="topMargin" constant="15" id="7QY-Br-6Cl"/>
                             <constraint firstItem="sEz-G1-WFh" firstAttribute="top" secondItem="Ymn-uy-gK0" secondAttribute="bottom" constant="12" id="7dY-ig-Nb0"/>
@@ -292,7 +292,7 @@
                             <constraint firstItem="Tuo-zq-6W8" firstAttribute="centerX" secondItem="h6a-RE-8PN" secondAttribute="centerX" id="nrM-ee-nZK"/>
                             <constraint firstAttribute="trailing" secondItem="Tqf-zy-r9e" secondAttribute="trailing" id="tAc-eU-ldG"/>
                             <constraint firstItem="Ymn-uy-gK0" firstAttribute="top" secondItem="Ids-XB-hks" secondAttribute="bottom" constant="4" id="vi4-bQ-g9X"/>
-                            <constraint firstItem="4oi-fh-PdM" firstAttribute="top" secondItem="wrR-pz-6uo" secondAttribute="bottom" constant="174" id="wIW-cl-Fks"/>
+                            <constraint firstItem="4oi-fh-PdM" firstAttribute="top" secondItem="wrR-pz-6uo" secondAttribute="bottom" constant="250" id="wIW-cl-Fks"/>
                             <constraint firstItem="wrR-pz-6uo" firstAttribute="top" secondItem="h6a-RE-8PN" secondAttribute="bottom" constant="12" id="wfa-Yz-NzG"/>
                         </constraints>
                         <variation key="default">
