@@ -292,8 +292,8 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 hr before meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuo-zq-6W8">
-                                <rect key="frame" x="15" y="180" width="149" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hr before meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuo-zq-6W8">
+                                <rect key="frame" x="15" y="183" width="149" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="Qey-xK-zNN"/>
                                 </constraints>
@@ -325,15 +325,18 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ymn-uy-gK0">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minimumValue="15" maximumValue="120" stepValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ymn-uy-gK0">
                                 <rect key="frame" x="464" y="209" width="94" height="29"/>
+                                <connections>
+                                    <action selector="changeAfterMealStepperValue:" destination="V9V-Bc-ms3" eventType="touchUpInside" id="S8W-in-zpb"/>
+                                </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour after meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ids-XB-hks">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hr after meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ids-XB-hks">
                                 <rect key="frame" x="434" y="178" width="147" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="T8W-q9-Mou"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -373,6 +376,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="mealLabel" destination="Ids-XB-hks" id="jpc-Ei-32E"/>
                         <outlet property="medicationLabel" destination="Tuo-zq-6W8" id="Z0E-6M-JNf"/>
                     </connections>
                 </viewController>
