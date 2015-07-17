@@ -10,5 +10,5 @@
 
 @interface IntervalViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *medicationLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *mealLabel;
 @end

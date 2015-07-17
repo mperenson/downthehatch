@@ -58,4 +58,27 @@
         }
     }
 }
+- (IBAction)changeAfterMealStepperValue:(id)sender {
+    
+    if ([sender isKindOfClass:[UIStepper class]]) {
+        UIStepper * stepper = (UIStepper*)sender;
+        
+        NSLog(@"stepper.value:%f", stepper.value);
+        
+        if (stepper.value<60) {
+            self.mealLabel.text = [NSString stringWithFormat:@"%d min after meal", (int)stepper.value ];
+        }else{
+            
+            int hours = stepper.value / 60;
+            
+            if ((int)stepper.value - hours * 60==0) {
+                self.mealLabel.text = [NSString stringWithFormat:@"%d hr after meal", hours];
+            } else {
+                self.mealLabel.text = [NSString stringWithFormat:@"%d hr %d min after meal", hours,(int)stepper.value - hours * 60];
+            }
+            
+            
+        }
+    }
+}
 @end
