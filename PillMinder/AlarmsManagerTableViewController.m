@@ -59,7 +59,10 @@
     
     cell.textLabel.text = notification.alertBody;
     
-    cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", notification.fireDate];
+   NSString *dateString =  [NSDateFormatter localizedStringFromDate:notification.fireDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
+    
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat: @"%@", dateString];
     
     return cell;
 }
