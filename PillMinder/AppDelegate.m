@@ -18,10 +18,15 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize viewController = _viewController; 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    self.userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    
+    
 #ifdef __IPHONE_8_0
     //Right, that is the point
     UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge

@@ -292,12 +292,12 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour before meal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuo-zq-6W8">
-                                <rect key="frame" x="15" y="183" width="149" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 hr before meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuo-zq-6W8">
+                                <rect key="frame" x="15" y="180" width="149" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="Qey-xK-zNN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -307,8 +307,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rx_button_fixed.png" translatesAutoresizingMaskIntoConstraints="NO" id="wrR-pz-6uo">
                                 <rect key="frame" x="43" y="250" width="100" height="100"/>
                             </imageView>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="h6a-RE-8PN">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minimumValue="15" maximumValue="120" stepValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="h6a-RE-8PN">
                                 <rect key="frame" x="42" y="209" width="94" height="29"/>
+                                <connections>
+                                    <action selector="changeBeforeMealStepperValue:" destination="V9V-Bc-ms3" eventType="touchUpInside" id="BpP-Yl-s72"/>
+                                </connections>
                             </stepper>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqf-zy-r9e">
                                 <rect key="frame" x="0.0" y="15" width="600" height="44"/>
@@ -369,6 +372,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="medicationLabel" destination="Tuo-zq-6W8" id="Z0E-6M-JNf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPP-ol-d0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

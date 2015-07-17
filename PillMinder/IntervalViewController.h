@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface IntervalViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *medicationLabel;
 
 @end
