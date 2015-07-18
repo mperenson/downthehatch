@@ -200,21 +200,21 @@
                                 </items>
                                 <color key="tintColor" red="0.090196078430000007" green="0.043137254899999998" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Take medication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNm-So-FVk">
-                                <rect key="frame" x="68" y="178" width="120" height="20"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Take medication" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNm-So-FVk">
+                                <rect key="frame" x="68" y="178" width="120" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="l9E-BE-5J1"/>
+                                    <constraint firstAttribute="height" constant="40" id="l9E-BE-5J1"/>
                                     <constraint firstAttribute="width" constant="120" id="wJa-Gq-qFb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eat meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLQ-5C-G0f">
-                                <rect key="frame" x="412" y="178" width="120" height="20"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eat meal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLQ-5C-G0f">
+                                <rect key="frame" x="412" y="178" width="120" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Xv4-iZ-CML"/>
-                                    <constraint firstAttribute="height" constant="20" id="jDZ-29-WPr"/>
+                                    <constraint firstAttribute="height" constant="40" id="jDZ-29-WPr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -254,10 +254,12 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="eatButton" destination="rUi-A0-2QY" id="3mn-Ki-R0W"/>
+                        <outlet property="eatMealLabel" destination="gLQ-5C-G0f" id="quL-17-V88"/>
                         <outlet property="instructionLabel" destination="VIE-Bz-GXB" id="hSK-Fx-0zA"/>
                         <outlet property="medsButton" destination="Aag-1i-3eb" id="f7K-jC-eqM"/>
                         <outlet property="setAlarm" destination="jOk-Df-Cy9" id="ElS-WQ-z6e"/>
                         <outlet property="stepper" destination="98v-du-DIU" id="hFa-qN-lFf"/>
+                        <outlet property="takeMedicationLabel" destination="LNm-So-FVk" id="oOZ-HR-PIC"/>
                         <outlet property="valueLabel" destination="kLl-w6-Tv7" id="8qJ-2R-BEK"/>
                     </connections>
                 </viewController>
@@ -376,6 +378,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="afterMealStepper" destination="Ymn-uy-gK0" id="6J3-8q-db2"/>
+                        <outlet property="beforeMealStepper" destination="h6a-RE-8PN" id="2uV-sa-1rk"/>
                         <outlet property="mealLabel" destination="Ids-XB-hks" id="jpc-Ei-32E"/>
                         <outlet property="medicationLabel" destination="Tuo-zq-6W8" id="Z0E-6M-JNf"/>
                     </connections>

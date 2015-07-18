@@ -22,6 +22,11 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *lastTapped;
 @property (strong, nonatomic) NSString *medicationLogPath;
+@property (weak, nonatomic) IBOutlet UILabel *takeMedicationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *eatMealLabel;
+
+@property(nonatomic) NSInteger timeIntervalBeforeMeal;
+@property(nonatomic) NSInteger timeIntervalAfterMeal;
 
 @end
 
@@ -42,6 +47,20 @@
     [self setValueFromStepper];
 }
 
+-(void) viewDidAppear:(BOOL)animated
+{
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    self.timeIntervalBeforeMeal = [userDefaults integerForKey: @"pillminder.timeIntervalBeforeMeal"];
+    
+    self.timeIntervalAfterMeal = [userDefaults integerForKey: @"pillminder.timeIntervalAfterMeal"];
+    
+    self.takeMedicationLabel.text = [NSString stringWithFormat: @"Take medication. Should eat in %ld minutes", (long)self.timeIntervalBeforeMeal];
+    
+    self.eatMealLabel.text = [NSString stringWithFormat: @"Eat meal. Should take medication in %ld minutes", (long)self.timeIntervalAfterMeal];
+    
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -58,11 +77,13 @@
     self.valueLabel.text = [NSString stringWithFormat:@"%.1f hours from now", self.stepper.value];
 }
 
-- (void) scheduleNotification:(CGFloat)hoursValue alertBody:(NSString*)alertBody
+- (void) scheduleNotification:(NSInteger)minutesValue alertBody:(NSString*)alertBody
 {
-    // Convert hours to seconds
-    NSInteger seconds = hoursValue * 60;
-    //NSInteger seconds = hoursValue * 3600;
+    //TEMP:
+    //NSInteger seconds = minutesValue;
+    // Convert minutes to seconds
+    NSInteger seconds = minutesValue*60;
+
     NSLog(@"Setting alarm for %ld seconds", (long)seconds);
     
     // Schedule local notification
@@ -91,10 +112,10 @@
         
     } completion:^(BOOL finished) {
         if (sender == self.medsButton) {
-            [self scheduleNotification:1 alertBody:kTimeToEatMessage];
+            [self scheduleNotification:self.timeIntervalBeforeMeal alertBody:kTimeToEatMessage];
         }
         else {
-            [self scheduleNotification:1 alertBody:kScheduleNextDoseMessage];
+            [self scheduleNotification:self.timeIntervalAfterMeal alertBody:kScheduleNextDoseMessage];
         }
         NSLog(@"Alarm set");
         
@@ -114,9 +135,9 @@
 
 - (IBAction)setAlarmTapped:(id)sender
 {
-    CGFloat correctedTimeInterval = self.stepper.value;
+    CGFloat correctedTimeInterval = self.stepper.value*60;
     if (self.lastTapped == self.medsButton) {
-        correctedTimeInterval -= 1; //replace with setting here
+        correctedTimeInterval -= self.timeIntervalBeforeMeal;
         [self scheduleNotification:correctedTimeInterval alertBody:kScheduleNextDoseMessage];
     }else{
         [self scheduleNotification:correctedTimeInterval alertBody:kTimeToEatMessage];

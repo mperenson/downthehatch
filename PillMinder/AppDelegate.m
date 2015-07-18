@@ -21,12 +21,7 @@
 @synthesize viewController = _viewController; 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    
-    self.userDefaults = [NSUserDefaults standardUserDefaults];
-    
-    
-    
+{    
 #ifdef __IPHONE_8_0
     //Right, that is the point
     UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge
@@ -38,11 +33,15 @@
     UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
 #endif
-    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    //self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    //self.window.rootViewController = self.viewController;
-    //[self.window makeKeyAndVisible];
+
+    
+    
+    NSDictionary *userDefaultsDefaults = [NSDictionary dictionaryWithObjectsAndKeys:
+                                          [NSNumber numberWithInt:60], @"pillminder.timeIntervalBeforeMeal",
+                                          [NSNumber numberWithInt:60], @"pillminder.timeIntervalAfterMeal",
+                                          nil];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:userDefaultsDefaults];
+    
     return YES;
 }
 

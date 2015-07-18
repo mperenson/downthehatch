@@ -8,11 +8,6 @@
 
 #import "TimeremainingViewController.h"
 
-@interface TimeremainingViewController ()
-
-@property (nonatomic, strong) NSNumber * timeInterval;
-
-@end
 
 @implementation TimeremainingViewController
 
@@ -35,21 +30,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
--(IBAction) increaseInterval
-{
-    self.timeInterval = [NSNumber numberWithInt:[self.timeInterval intValue]  + 15];
-}
--(IBAction) decreaseInterval
-{
-    self.timeInterval = [NSNumber numberWithInt:[self.timeInterval intValue]  - 15];
-}
-
--(void) setTimeInterval
-{
-    [[NSUserDefaults standardUserDefaults] setObject: self.timeInterval forKey: @"timeInterval"];
-    
-    NSLog(@"TimeInterval : %d", [self.timeInterval intValue]);
-}
 
 @end
