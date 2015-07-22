@@ -113,12 +113,13 @@
     
 }
 
-- (void) scheduleNotification:(CGFloat)hoursValue alertBody:(NSString*)alertBody
+- (void) scheduleNotification:(NSInteger)minutesValue alertBody:(NSString*)alertBody
 {
-    // Convert hours to seconds
-    NSInteger seconds = hoursValue * 6;
+    //TEMP:
+    //NSInteger seconds = minutesValue;
+    // Convert minutes to seconds
+    NSInteger seconds = minutesValue*60;
     
-    //NSInteger seconds = hoursValue * 3600;
     NSLog(@"Setting alarm for %ld seconds", (long)seconds);
     
     // Schedule local notification

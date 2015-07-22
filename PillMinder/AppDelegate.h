@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) ViewController *viewController;
 
+- (void) scheduleNotification:(NSInteger)minutesValue alertBody:(NSString*)alertBody;
+
 @end

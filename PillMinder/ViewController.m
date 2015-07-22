@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+
+#import "AppDelegate.h"
+
 #import "LogViewController.h"
 #import "Constants.h"
 
@@ -55,9 +58,49 @@
     
     self.timeIntervalAfterMeal = [userDefaults integerForKey: @"pillminder.timeIntervalAfterMeal"];
     
-    self.takeMedicationLabel.text = [NSString stringWithFormat: @"Take medication. Should eat in %ld minutes", (long)self.timeIntervalBeforeMeal];
+    UIApplication *app = [UIApplication sharedApplication];
+    NSMutableArray *alarms = [NSMutableArray arrayWithArray:[app scheduledLocalNotifications]];
+
+    BOOL timeToEat = NO;
+    BOOL timeToMed = NO;
     
-    self.eatMealLabel.text = [NSString stringWithFormat: @"Eat meal. Should take medication in %ld minutes", (long)self.timeIntervalAfterMeal];
+    UILocalNotification *notificationToEat;
+    UILocalNotification *notificationToMed;
+    
+    for (UILocalNotification *notification in alarms) {
+        if ([notification.alertBody isEqualToString:kScheduleNextDoseMessage]) {
+            timeToMed = YES;
+            
+            notificationToMed = notification;
+        }
+        
+        if ([notification.alertBody isEqualToString:kTimeToEatMessage]) {
+            timeToEat = YES;
+            
+            notificationToEat = notification;
+        }
+    }
+    
+    if (!timeToEat) {
+        self.takeMedicationLabel.text = [NSString stringWithFormat: @"Take meds. Meal alarm in %ld min", (long)self.timeIntervalBeforeMeal];;
+        
+        self.medsButton.enabled = YES;
+    }else{
+         NSString *dateString =  [NSDateFormatter localizedStringFromDate:notificationToEat.fireDate dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
+        
+        self.takeMedicationLabel.text =  [NSString stringWithFormat: @"Meal at %@", dateString];
+        self.medsButton.enabled = NO;
+    }
+    
+    if (!timeToMed) {
+        self.eatMealLabel.text = [NSString stringWithFormat: @"Eat meal. Meds alarm in %ld min", (long)self.timeIntervalAfterMeal];
+        self.eatButton.enabled = YES;
+    } else {
+        NSString *dateString =  [NSDateFormatter localizedStringFromDate:notificationToMed.fireDate dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
+        
+        self.eatMealLabel.text =  [NSString stringWithFormat: @"After meal meds at %@", dateString];
+        self.eatButton.enabled = NO;
+    }
     
 }
 
@@ -77,49 +120,42 @@
     self.valueLabel.text = [NSString stringWithFormat:@"%.1f hours from now", self.stepper.value];
 }
 
-- (void) scheduleNotification:(NSInteger)minutesValue alertBody:(NSString*)alertBody
-{
-    //TEMP:
-    //NSInteger seconds = minutesValue;
-    // Convert minutes to seconds
-    NSInteger seconds = minutesValue*60;
-
-    NSLog(@"Setting alarm for %ld seconds", (long)seconds);
-    
-    // Schedule local notification
-    
-    UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.alertBody = alertBody;
-    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:seconds];
-    notification.soundName = UILocalNotificationDefaultSoundName;
-    
-    NSLog(@"Local Notification %@", notification);
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-    //[[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-}
-
 #pragma mark - Actions
 
 - (IBAction)iconPressed:(id)sender
 {
     self.lastTapped = sender;
-    [UIView animateWithDuration:0.7f animations:^{
+   // [UIView animateWithDuration:0.7f animations:^{
         self.stepper.alpha = 1.0f;
         self.valueLabel.alpha = 1.0f;
         self.instructionLabel.alpha = 1.0f;
         self.setAlarm.alpha = 1.0f;
         
-    } completion:^(BOOL finished) {
+  //  } completion:^(BOOL finished) {
+        AppDelegate* appDelegate = ((AppDelegate*)[[UIApplication sharedApplication] delegate]) ;
         if (sender == self.medsButton) {
-            [self scheduleNotification:self.timeIntervalBeforeMeal alertBody:kTimeToEatMessage];
+            [appDelegate scheduleNotification:self.timeIntervalBeforeMeal alertBody:kTimeToEatMessage];
+            self.medsButton.enabled = NO;
+            
+            NSString *dateString =  [NSDateFormatter localizedStringFromDate:[[NSDate date] dateByAddingTimeInterval:self.timeIntervalBeforeMeal*60] dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
+            
+            self.takeMedicationLabel.text = [NSString stringWithFormat: @"Meal at %@", dateString];
+            
+            self.instructionLabel.text = @"SCHEDULE NEXT DOSE";
         }
         else {
-            [self scheduleNotification:self.timeIntervalAfterMeal alertBody:kScheduleNextDoseMessage];
+            [appDelegate scheduleNotification:self.timeIntervalAfterMeal alertBody:kScheduleNextDoseMessage];
+            self.eatButton.enabled = NO;
+            
+            NSString *dateString =  [NSDateFormatter localizedStringFromDate:[[NSDate date] dateByAddingTimeInterval:self.timeIntervalAfterMeal*60] dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
+            
+            self.eatMealLabel.text = [NSString stringWithFormat: @"After meal meds at %@", dateString];
+            
+            self.instructionLabel.text = @"SCHEDULE NEXT MEAL";
         }
         NSLog(@"Alarm set");
         
-    }];
+  //  }];
     
     [self writeEntryToCSVFile];
 }
@@ -136,17 +172,22 @@
 - (IBAction)setAlarmTapped:(id)sender
 {
     CGFloat correctedTimeInterval = self.stepper.value*60;
+    
+    AppDelegate* appDelegate = ((AppDelegate*)[[UIApplication sharedApplication] delegate]) ;
     if (self.lastTapped == self.medsButton) {
-        correctedTimeInterval -= self.timeIntervalBeforeMeal;
-        [self scheduleNotification:correctedTimeInterval alertBody:kScheduleNextDoseMessage];
+        //correctedTimeInterval -= self.timeIntervalBeforeMeal;
+        [appDelegate scheduleNotification:correctedTimeInterval alertBody:kScheduleNextDoseMessage];
     }else{
-        [self scheduleNotification:correctedTimeInterval alertBody:kTimeToEatMessage];
+        [appDelegate scheduleNotification:correctedTimeInterval alertBody:kTimeToEatMessage];
     }
     
     self.stepper.alpha = 0.0f;
     self.valueLabel.alpha = 0.0f;
     self.instructionLabel.alpha = 0.0f;
     self.setAlarm.alpha = 0.0f;
+    
+    
+    
 }
 
 - (IBAction)logButtonTapped:(id)sender
