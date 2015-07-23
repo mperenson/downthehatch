@@ -76,22 +76,12 @@
     
     UIAlertView *alertView = nil;
     
-    if ([notification.alertBody isEqualToString:kScheduleNextDoseMessage]) {
-        alertView = [[UIAlertView alloc] initWithTitle:kScheduleNextDoseMessage
+    alertView = [[UIAlertView alloc] initWithTitle:notification.alertBody
                                                message:@""
                                               delegate:self
                                      cancelButtonTitle:kCloseButtonTitle
                                      otherButtonTitles:nil];
-    }
-    else {
-        alertView = [[UIAlertView alloc] initWithTitle:kTimeToEatMessage
-                                               message:@""
-                                              delegate:self
-                                     cancelButtonTitle:kCloseButtonTitle
-                                     otherButtonTitles:nil];
-
-    }
-
+ 
     [alertView show];
 }
 
@@ -105,8 +95,9 @@
     }
     
     [self.tempCounterData addObject:counterValue];
-    
-    [self scheduleNotification:[counterValue intValue] alertBody:kScheduleNextDoseMessage];
+ 
+    //TODO
+ //   [self scheduleNotification:[counterValue intValue] alertBody:kScheduleNextDoseMessage];
     
     
     

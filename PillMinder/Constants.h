@@ -6,8 +6,8 @@
 //
 //
 
-static NSString *kScheduleNextDoseMessage = @"Time to Take Your Medication!";
+static NSString *kScheduleNextAfterMealDoseMessage = @"Time to Take Your After Meal Medication!";
+static NSString *kScheduleNextBeforeMealDoseMessage = @"Time to Take Your Before Meal Medication!";
 static NSString *kTimeToEatMessage = @"Time to Eat!";
-//static NSString *kTimeToTakePillsMessage = @"Time to Take Pills!";
-//static NSString *kSetNewAlarmMessage = @"Set New Alarm";
+static NSString *kBeforeMealMedTakenTimeToEatMessage = @"Before Meal Medication taken. Time to Eat!";
 static NSString *kCloseButtonTitle = @"Close";
